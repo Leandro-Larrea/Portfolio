@@ -1,15 +1,18 @@
-.container{
-    &:hover{
-        .title{
-            display: none;
-        }
-    }
-    .title{
-        color: $colorPasion;
-        
+.nav{
+    position: absolute;
+    z-index: 10;
+    background-color: $colorBlack;
+    width: 100%;
+    .nav-container{
+        max-width: 450px;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: $colorWhite;
+
+        font-size: $fontA;
+        gap: 20px;
+        padding: 1.5rem;
     }
 }
-
-
-
-

@@ -1,0 +1,57 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    position: relative;
+    background-color: $colorGreen;
+    z-index: 3;
+}
+
+.container{
+    background-image: url("../media/images/programing.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-color: $colorDarkGreen;
+    clip-path: ellipse(92% 63% at 75% 76%);
+    height:100vh;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    
+    }
+
+.card{
+     height: 300px;
+     width: 250px;
+     background-color: $colorBlack; 
+     position: absolute;
+     color: $colorWhite;
+     display: grid;
+     grid-template-columns: 1fr;
+     z-index: 35;
+     padding: 10px;
+     box-sizing:border-box;
+     border-radius: 15px;
+        h3{
+            text-align: center;
+        }
+     box-shadow: 0 5px 15px black;
+     bottom: 0;
+     right: 0;
+     margin: 20px;
+    }
+
+
+
+    
+
+
+
+
+
+
+
