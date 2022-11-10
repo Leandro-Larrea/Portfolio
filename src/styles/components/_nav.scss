@@ -1,0 +1,15 @@
+.container{
+    &:hover{
+        .title{
+            display: none;
+        }
+    }
+    .title{
+        color: $colorPasion;
+        
+    }
+}
+
+
+
+
