@@ -1,11 +1,26 @@
 //variables
+:root{
+    --fontP: 1rem;
+    --fontA: 1rem;
+    --fontH2: 2.5rem;
+    --fontH1: 3rem;
+    @media screen and (min-width: 700px){
+        --fontP: 1.1rem;
+        --fontA: 1.2rem;
+        --fontH2: 2.5rem;
+        --fontH1: 3.5rem;
+    }
+}
     //colors
     $colorGreen: #6D9773;
-    $colorDarkGreen: #0C3B2E;
+    $colorDarkGreen: #f2f8f6;
     $colorBrown: #BB8A52;
     $colorOrange: #FFBA00;
-    $colorBlack:rgb(26, 24, 24);
-    $colorWhite: rgb(245, 233, 233);
-    //font sizes
-    $fontA: 18px;
+    $colorBlack:rgba(26, 24, 24,1);
+    $colorWhite: rgb(245, 243, 243);
+    $colorWhiteOpacity: rgb(255, 255, 255, .6)
+    //mixins
+    
+
+   
 
