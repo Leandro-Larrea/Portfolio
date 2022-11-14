@@ -1,22 +1,23 @@
 import { About } from "./About"
+import { Footer } from "./Footer"
 import { Nav } from "./nav"
 import { Projects } from "./Projects"
 
 export const Home = () =>{
     return(
         <div className="main">
-            <header className="header">
+            <header className="header" id="home">
                 <Nav/>
                 <div className="container">
                 <div className="card">
-                    <h1>Full Stack</h1>
-                    <h3>asd asdsad</h3>
-                    <h3>asdsadadssda</h3>
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, veritatis officiis atque quisquam velit similique iusto, soluta mollitia incidunt, aperiam molestiae est suscipit provident perspiciatis cum nam. Perspiciatis, quibusdam maxime!</p>
+                    <h1>Bienvenidos a mi Portfolio</h1>  
+                    <p></p>
                 </div>
                 </div>
             </header>
-            <About></About>
+            <About></About> 
+            <Projects></Projects>
+            <Footer></Footer>
         </div>
     )
 }

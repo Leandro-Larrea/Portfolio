@@ -18,8 +18,17 @@
     $colorOrange: #FFBA00;
     $colorBlack:rgba(26, 24, 24,1);
     $colorWhite: rgb(245, 243, 243);
-    $colorWhiteOpacity: rgb(255, 255, 255, .6)
+    $colorWhiteOpacity: rgb(255, 255, 255, .6);
     //mixins
+    @mixin flex($direction: row, $align: center, $justify: center, $wrap: nowrap){
+        display: flex;
+        flex-direction: $direction;
+        align-items: $align;
+        justify-content: $justify;
+        flex-wrap: $wrap;
+    }
+    
+ 
     
 
    

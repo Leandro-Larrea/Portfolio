@@ -2,16 +2,21 @@
     box-sizing:border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .header{
     position: relative;
-    background-color: $colorBrown;
     z-index: 3;
-    background-image: url("../media/images/programing.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+     background: white url(../media/images/programing.jpg) center/cover no-repeat fixed;
+    // background-image: url("../media/images/programing.jpg");
+    
 }
+
+
+
+
+
 
 .svg{
 margin-top: 50px;
@@ -33,10 +38,6 @@ min-height: 150px;
     background-color: rgba(0,0,0, .45);
 }
 
-.path{
-    fill:#23282b;
-    fill-opacity:1;
-}
 
 .cardContainer{
     width: 100%;
@@ -47,16 +48,13 @@ min-height: 150px;
 .card{
     max-width: 350px;
     color: $colorBlack;
-    display: flex;
     height: 100%;
-    justify-content: center;
-    flex-direction: column;
+    @include flex($direction: column, $justify: center, $align:none);
     gap: 20px;
     z-index: 5;
     padding: 10px;
     box-sizing:border-box;
     border-radius: 5px;
-    text-align: left;
     h3{
         color: $colorOrange;
     }
@@ -70,8 +68,8 @@ min-height: 150px;
         text-align: left;
         font-size:var(--fontP);
         };
-    bottom: 0;
-    right: 0;
-    margin: 20px;
+    margin: 5%;
 }
+
+
 

@@ -1,25 +1,27 @@
 .nav{
     position: absolute;
     z-index: 10;
-    top: 0;
+    animation: scroll 0.3s linear;
     opacity: 1;
+    top: 0;
     height: 50px;
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
     transition: 0.4s;
-    animation: scrollOff .3s linear;
+    animation: appears .5s linear;
     .nav-container{
         flex-direction: row-reverse;
         height: 100%;
         align-items: center;
         display: flex;
-        justify-content: center;
-        color: $colorWhiteOpacity;
+        justify-content: center; 
         gap: 10%;
         position: relative;
         width: 100%;
         a{
+            color: $colorWhiteOpacity;
+            text-decoration: none;
             font-size: var(--fontA);
             border-bottom: 1px solid transparent;
             cursor: pointer;
@@ -55,8 +57,23 @@
             gap: 10%;
             position: relative;
             width: 100%;
+            a{
+                text-decoration: none;
+                color: $colorBlack;
+            }
         }   
     }
+
+@keyframes appears{
+    0%{
+        display: none;
+        background-color: transparent;
+    }
+    
+    100%{
+        display: block;
+    }
+}
 
 @keyframes scroll{
     0%{
