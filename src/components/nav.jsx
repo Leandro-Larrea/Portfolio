@@ -10,7 +10,9 @@ export const Nav = () =>{
 
     return(
         <nav className={scrollPosition < 500? "nav": "scroll"} >
-            <a className="logo">L L</a>
+            <div className="ico-container">
+                <p className="logo">L L</p>
+            </div>
             <div className={"nav-container"}>
                 <a href="#contact">Contact</a>
                 <a href="#projects">Projects</a>

@@ -19,6 +19,9 @@ import ico8 from "../media/images/programing-icos/redux.png";
 import ico9 from "../media/images/programing-icos/sass.png";
 import ico10 from "../media/images/programing-icos/express.png";
 import pc from  "../media/images/pc2.png";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import "animate.css/animate.min.css";
+
 
 
 export const About = ()=>{
@@ -28,11 +31,16 @@ export const About = ()=>{
     const icos = frontIcos.concat(backIcos)
    return (
         <div className="about-container" id="about">
-            <div className="about-card">
-                <h1>Skills</h1>
-                <h2>Frontend & Backend</h2>
-                <p>Estas son las herramientas con las que he estado trabajando y que sigo desarrollando cada día para ser un mejor programador.</p>
+            
+            <div className="about-card">            
+                <AnimationOnScroll animateIn="animate__fadeInRightBig" offset="20">
+                    <h1>Skills</h1>
+                    <h2>Frontend & Backend</h2>
+                    <p>Estas son las herramientas con las que he estado trabajando y que sigo desarrollando cada día para ser un mejor programador.</p>
+                </AnimationOnScroll>
             </div>
+            
+           
             <div className="about-img-container">
                 <img src={pc} className="img"></img>
             </div>
