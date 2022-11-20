@@ -37,6 +37,18 @@
     
 }
 
+.logo{
+    position: absolute;
+    color: $colorWhite;
+    border: 1px solid $colorWhite;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    left: 0;
+    margin: 10px;
+
+}
+
 .scroll{
         background-color: $colorWhite;
         position: fixed;

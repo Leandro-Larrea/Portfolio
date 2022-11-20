@@ -10,8 +10,7 @@ export const Home = () =>{
                 <Nav/>
                 <div className="container">
                 <div className="card">
-                    <h1>Bienvenidos a mi Portfolio</h1>  
-                    <p></p>
+                    <h1>Hola soy Leandro Larrea<br/> Bienvenidos a mi Portfolio</h1>  
                 </div>
                 </div>
             </header>

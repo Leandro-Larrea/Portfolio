@@ -28,25 +28,22 @@ min-height: 150px;
     height:100vh;
     overflow: hidden;
     position: relative;
-    display: flex;
+    @include flex($justify: center);
     overflow: hidden;
-    background-color: rgba(0,0,0, .45);
+    background-color: rgba(0,0,0, .65);
 }
 
 .cardContainer{
     width: 100%;
     position: absolute;
     height: 100%;
+    background-color: red;
 }
 
 .card{
-    max-width: 350px;
     color: $colorBlack;
-    height: 100%;
     @include flex($direction: column, $justify: center, $align:none);
-    gap: 20px;
     z-index: 5;
-    padding: 10px;
     box-sizing:border-box;
     border-radius: 5px;
 

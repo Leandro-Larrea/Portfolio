@@ -37,6 +37,7 @@
 .about-card{
     max-width: 350px;
     order: 1;
+    
     grid-column: span 2;
     color: $colorBlack;
     height: 100%;
@@ -51,8 +52,9 @@
     text-align: right;
     h1{
         font-size: var(--fontH1);
-        color: $colorBlack;
+        color: $colorWhite;
         margin-bottom: 20px;
+        background: linear-gradient(90deg, $colorWhite, rgb(211, 31, 211));
     };
 
     p{
