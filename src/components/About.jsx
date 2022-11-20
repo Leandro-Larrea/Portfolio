@@ -8,17 +8,18 @@ import { useEffect } from "react";
 //              links.push(mod.default)
 //              console.log(mod.default)
 //          })} 
-import ico1 from "../media/images/programing-icos/css.png"
-import ico2 from "../media/images/programing-icos/html.png"
-import ico3 from "../media/images/programing-icos/js.png"
-import ico4 from "../media/images/programing-icos/mongo.png"
-import ico5 from "../media/images/programing-icos/node.png"
-import ico6 from "../media/images/programing-icos/postgresql.png"
-import ico7 from "../media/images/programing-icos/react.png"
-import ico8 from "../media/images/programing-icos/redux.png"
-import ico9 from "../media/images/programing-icos/sass.png"
-import ico10 from "../media/images/programing-icos/express.png"
-import pc from  "../media/images/pc2.png"
+import ico1 from "../media/images/programing-icos/css.png";
+import ico2 from "../media/images/programing-icos/html.png";
+import ico3 from "../media/images/programing-icos/js.png";
+import ico4 from "../media/images/programing-icos/mongo.png";
+import ico5 from "../media/images/programing-icos/node.png";
+import ico6 from "../media/images/programing-icos/postgresql.png";
+import ico7 from "../media/images/programing-icos/react.png";
+import ico8 from "../media/images/programing-icos/redux.png";
+import ico9 from "../media/images/programing-icos/sass.png";
+import ico10 from "../media/images/programing-icos/express.png";
+import pc from  "../media/images/pc2.png";
+
 
 export const About = ()=>{
     

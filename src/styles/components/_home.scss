@@ -13,11 +13,6 @@
     
 }
 
-
-
-
-
-
 .svg{
 margin-top: 50px;
 display: flex;
@@ -38,7 +33,6 @@ min-height: 150px;
     background-color: rgba(0,0,0, .45);
 }
 
-
 .cardContainer{
     width: 100%;
     position: absolute;
@@ -55,14 +49,17 @@ min-height: 150px;
     padding: 10px;
     box-sizing:border-box;
     border-radius: 5px;
+
     h3{
         color: $colorOrange;
     }
+
     h1{
         font-size: var(--fontH1);
         color: $colorWhite;
         margin-bottom: 20px;
     }
+    
     p{
         color: $colorWhite;
         text-align: left;
