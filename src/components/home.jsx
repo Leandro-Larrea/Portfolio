@@ -3,6 +3,7 @@ import { Footer } from "./Footer"
 import { Nav } from "./nav"
 import { Projects } from "./Projects"
 
+
 export const Home = () =>{
     return(
         <div className="main">
@@ -10,7 +11,7 @@ export const Home = () =>{
                 <Nav/>
                 <div className="container">
                 <div className="card">
-                    <h1>Hola soy Leandro Larrea<br/> Bienvenidos a mi Portfolio</h1>  
+                <h2>Hola!</h2><h3> soy</h3><h1>Leandro Larrea</h1> <h3>Bienvenidos</h3> <h2>a mi portfolio</h2>
                 </div>
                 </div>
             </header>

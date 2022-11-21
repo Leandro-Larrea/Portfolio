@@ -33,7 +33,7 @@ export const About = ()=>{
         <div className="about-container" id="about">
             
             <div className="about-card">            
-                <AnimationOnScroll animateIn="animate__fadeInRightBig" offset="20">
+                <AnimationOnScroll animateIn="animate__fadeInRightBig">
                     <h1>Skills</h1>
                     <h2>Frontend & Backend</h2>
                     <p>Estas son las herramientas con las que he estado trabajando y que sigo desarrollando cada día para ser un mejor programador.</p>

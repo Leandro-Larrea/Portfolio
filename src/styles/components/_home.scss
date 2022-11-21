@@ -42,15 +42,19 @@ min-height: 150px;
 
 .card{
     color: $colorBlack;
-    @include flex($direction: column, $justify: center, $align:none);
+   
     z-index: 5;
     box-sizing:border-box;
     border-radius: 5px;
 
     h3{
+        display: inline;
         color: $colorOrange;
     }
-
+    h2{
+        display: inline;
+        color: rgb(221, 58, 121);
+    }
     h1{
         font-size: var(--fontH1);
         color: $colorWhite;

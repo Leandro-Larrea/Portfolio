@@ -9,41 +9,52 @@
 .projects-card{
     border-radius: 3px;
     @include flex($direction: column, $justify: space-between);
-    height: 300px;
-    height: 350px;
-    padding: 10px;
-    border-left: 1px solid rgba(0,100,200,1);
-    border-bottom: 1px solid rgba(0,100,200,1);
-    &:hover{
-        box-shadow: inset 350px 0 0 0px rgb(58, 147, 230);
-    }
-    transition: .3s;
-}
-
-
-
-.projects-img-container{
     max-width: 300px;
-    height: 200px;
-    border-radius: 3px;
-}
-
-.projects-img{
-    width: 100%;
-    border-radius: 3px;
-    height: 100%;
-}
-
-.buttons-container{
-    @include flex($justify: space-between);
-    width: 100%;
-        button{
-            width: 80px;
-            height: 35px;
-            border-radius: 3px;
-            border: 1px solid rgba(0,100,200,1);
-            cursor: pointer;
-
+    background-color: rgba(248, 248, 247, 0.836);
+    border-radius: 10px;
+    .projects-img-container{
+        max-width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        .projects-img{
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 100%;
         }
+    }
+    .projects-description{
+        padding: 10px;
+        min-height: 160px;
+    }
+    box-shadow: 3px 3px 3px black;
+    transition: .3s;
+    .buttons-container{
+        @include flex($justify: space-around);
+        width: 100%;
+        flex-basis: 70px;
+            button{
+                width: 80px;
+                height: 35px;
+                border-radius: 3px;
+                cursor: pointer;
+                border-radius: 10px;
+                color: rgb(58, 147, 230);;
+                transition: 0.2s;
+                border: 1px solid rgb(58, 147, 230);
+                &:hover{
+                    box-shadow:  0px 0px 14px rgb(58, 147, 230);
+                }
+
+            }
+    }
 }
+
+
+
+
+
+
+
+
 
