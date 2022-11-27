@@ -33,7 +33,7 @@ export const About = ()=>{
         <div className="about-container" id="about">
             
             <div className="about-card">            
-                <AnimationOnScroll animateIn="animate__fadeInRightBig">
+                <AnimationOnScroll duration={.5} animateIn="animate__fadeInRightBig">
                     <h1>Skills</h1>
                     <h2>Frontend & Backend</h2>
                     <p>Estas son las herramientas con las que he estado trabajando y que sigo desarrollando cada día para ser un mejor programador.</p>
@@ -46,10 +46,20 @@ export const About = ()=>{
             </div>
             <div className="skills-main">
                 <div className="skills-container">
-                    {frontIcos?.map(e => <img className="ico" src={e}/>)}
+                    {frontIcos?.map((e,i) => 
+                    <div className="ico" key={i}>
+                        <AnimationOnScroll  duration={Math.random()} animateIn="animate__zoomIn">
+                            <img  className="ico" src={e}/>
+                            </AnimationOnScroll>
+                    </div>)}
                 </div>
                 <div className="skills-container">
-                    {backIcos?.map(e => <img className="ico" src={e}/>)}
+                    {backIcos?.map((e,i) => 
+                    <div className="ico" key={i}>
+                        <AnimationOnScroll  duration={.5} animateIn="animate__zoomIn">
+                            <img  className="ico" src={e}/>
+                            </AnimationOnScroll>
+                    </div>)}
                 </div>
                 <div className="text-container">
                     <h1></h1>

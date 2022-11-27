@@ -2,29 +2,38 @@ import videogames from "../media/images/videogames.png";
 import pokemons from "../media/images/pokemons.png";
 import eddie from "../media/images/eddie.png";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import github from "../media/images/programing-icos/github.png"
 
 
 export const Projects = ()=>{
 
     let a =[
-        {description:"Un proyecto individual usando la api de videogames RAWG en el que integre las tecnologias que aprendi en el curso de HENRY, muestra diferentes juegos de la api, los cuales podemos filtrar y ordenar de diferentes formas, ademas permite al usuario postear editar y eliminar su propio videojuego", img:videogames},
-         {description:"Un proyecto hecho con la PokeApi, permite al usuario buscar entre los diferentes pokemones asi como crear un pokemon personalizado", img:pokemons},
-         {description:"Eddie homepage es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en una imagen, tanto en su version desktop como mobile.", img:eddie}
+        {link:"https://github.com/Leandro-Larrea/videoGames",
+        description:"Un proyecto individual usando la api de videogames RAWG en el que integre las tecnologias que aprendi en el curso de HENRY, muestra diferentes juegos de la api, los cuales podemos filtrar y ordenar de diferentes formas, ademas permite al usuario postear editar y eliminar su propio videojuego",
+        img:videogames},
+        {link:"https://github.com/Leandro-Larrea/Pokemon",
+        description:"Un proyecto hecho con la PokeApi, permite al usuario buscar entre los diferentes pokemones asi como crear un pokemon personalizado",
+        img:pokemons},
+         {link:"https://github.com/Leandro-Larrea/Edie-home-page",
+         description:"Eddie homepage es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en una imagen, tanto en su version desktop como mobile.",
+        img:eddie,
+        demo:"https://airy-luck-feta.glitch.me/#"}
         ]
 
     return(
         <div className="projects-container" id="projects">
             {a?.map(a=>
-                 <AnimationOnScroll animateIn="animate__zoomIn" > <div className="projects-card">
-                <div className="projects-img-container">
+                 <AnimationOnScroll duration={Math.random() + .3} animateIn="animate__zoomIn">
+                     <div className="projects-card" key={a}>
+                <div className="projects-img-container" >
                 <img className="projects-img" src={a.img}></img>
                 </div>
                 <div className="projects-description">
                     <p>{a.description}</p>
                 </div>
                 <div className="buttons-container">
-                    <button className="button1">Project</button>
-                    <button className="button2">Code</button>
+                    <a className="button1" href={a.demo?a.demo:a.link } target="blank">Project</a>
+                    <a className="button2" href={a.link} target="blank"><img src={github}/>Code</a>
                 </div>
             </div>
             </AnimationOnScroll>

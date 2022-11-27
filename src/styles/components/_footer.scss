@@ -1,10 +1,33 @@
 .footer{
     width: 100%;
-    display: flex;
+    @include flex($justify: space-between);
     background: linear-gradient($colorWhite, $colorBrown );
     height: 100vh;
-    justify-content: center;
-    align-items: center;
     gap: 5%;
-    flex-wrap: wrap;
+    div{
+        width: 350px;
+       min-height: 300px;
+      
+      
+    }
+    .contact-container{
+        @include flex($justify: flex-start, $direction: column);
+        gap: 15px;
+        a{
+            font-size: var(--fontA);
+            cursor: pointer;
+            @include flex($justify: space-between);
+            width: 40%;
+            color: $colorWhite;
+            &:hover{
+                transform: scale(1.1);
+            }
+            img{
+                width: 40px;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+       }
+    }
 }
