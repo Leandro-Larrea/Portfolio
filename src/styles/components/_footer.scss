@@ -6,9 +6,7 @@
     gap: 5%;
     div{
         width: 350px;
-       min-height: 300px;
-      
-      
+        min-height: 300px;
     }
     .contact-container{
         @include flex($justify: flex-start, $direction: column);
@@ -28,6 +26,6 @@
                     transform: scale(1.1);
                 }
             }
-       }
+        }
     }
 }
