@@ -25,24 +25,34 @@ export const Projects = ()=>{
         demo:"https://airy-luck-feta.glitch.me/#"}
         ]
 
-    return(
-        <div className={`projects-container ${theme}`} id="projects">
-            {a?.map(a=>
-                 <AnimationOnScroll duration={Math.random() + .3} animateIn="animate__zoomIn">
-                     <div className={`projects-card ${theme}`} key={a.link} >
-                <div className="projects-img-container" >
-                <img className="projects-img" src={a.img}></img>
-                </div>
-                <div className="projects-description">
-                    <p>{a.description}</p>
-                </div>
-                <div className="buttons-container" key={a.link} >
-                    <a key={a.link} className={`button1 ${theme}`}  href={a.demo?a.demo:a.link } target="_blank">Project</a>
-                    <a className={`button2 ${theme}`} href={a.link} target="_blank"><img src={github}/>Code</a>
-                </div>
+    return(    
+        <div className={`projects ${theme}`} id="projects">
+            <div className="projects-titles-container">
+                <AnimationOnScroll duration={.5} animateIn="animate__fadeInLeftBig">
+                    <div className="titles">
+                        <h1>Mis</h1> <h1>proyectos</h1>
+                        <h2></h2>
+                    </div>
+                </AnimationOnScroll>
             </div>
-            </AnimationOnScroll>
-            )}
+            <div className={`projects-container ${theme}`}>
+                {a?.map(a=>
+                     <AnimationOnScroll duration={.5} animateIn="animate__zoomIn">
+                         <div className={`projects-card ${theme}`} key={a.link} >
+                    <div className="projects-img-container" >
+                    <img className="projects-img" src={a.img}></img>
+                    </div>
+                    <div className="projects-description">
+                        <p>{a.description}</p>
+                    </div>
+                    <div className="buttons-container" key={a.link} >
+                        <a key={a.link} className={`button1 ${theme}`}  href={a.demo?a.demo:a.link } target="_blank">Project</a>
+                        <a className={`button2 ${theme}`} href={a.link} target="_blank"><img src={github}/>Code</a>
+                    </div>
+                </div>
+                </AnimationOnScroll>
+                )}
+            </div>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 .footer{
     width: 100%;
     @include flex($justify: space-between);
-    background: linear-gradient($colorWhite, $colorBrown );
+    background: linear-gradient($colorWhite, $colorRed );
     height: 100vh;
     gap: 5%;
     div{

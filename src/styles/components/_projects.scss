@@ -1,12 +1,38 @@
-.projects-container{
+.projects{
     width: 100%;
     min-height: 100vh;
-    @include flex($wrap: wrap);
-    gap: 5%;
+    @include flex($direction: column, $wrap: wrap, $justify: space-around);
     position: relative;
+    .projects-titles-container{
+        box-sizing: border-box;
+        align-self: flex-start;
+        padding-left: 5%;
+        h1{
+            font-size: var(--fontH1);
+            display: inline;
+            &:nth-child(1){
+                color: $colorRed;
+            }
+            &:nth-child(2){
+                color: $colorOrange;
+            }
+        }           
+    }
+}
+
+.projects-title-container{
+    width: 100%;
+    color:$colorRed
+}
+
+.projects-container{
+    @include flex($wrap: wrap);
+    width: 100%;
+    gap: 5%;
     &:before{
-        @include backgroundBefore($width:50%);
-   }
+        @include backgroundBefore($width:50%, $height:70%);
+    }
+    position: relative;
 
 }
 
