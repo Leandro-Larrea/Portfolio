@@ -4,9 +4,26 @@
     position: relative;
     @include flex($direction: column, $wrap: wrap, $justify: space-around);
     .pages{
-        background-color: red;
+        margin-bottom: 25px;
         position: relative;
-        z-index: 40;
+        z-index: 1;
+        button{
+            box-shadow: 0 0 10px;
+            width: 50px;
+            height: 50px;
+            margin: 10px 10px 10px;
+            border-radius: 3px;
+            background-color: transparent;
+            border: 1px solid none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.1s;
+            &:hover{
+                transform: scale(1.1);
+                background-color: rgb(48, 131, 190);
+                color: white;
+            }
+        }
     }
     .projects-titles-container{
         margin-bottom: 140px;       

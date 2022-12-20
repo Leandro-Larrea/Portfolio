@@ -68,7 +68,7 @@ export const Projects = ()=>{
             <div className="pages">
                 {a?.map((b, i) => {if(i < Math.ceil((a.length/3))){
                     return (
-                    <button onClick={()=>changePage(i+1)}>{i + 1}</button>
+                    <button className={`${theme}`} onClick={()=>changePage(i+1)}>{i + 1}</button>
                     )
                     }}
                 )}
