@@ -4,11 +4,15 @@ import eddie from "../media/images/eddie.png";
 import eddieMobile from "../media/images/eddieMobile.png";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import github from "../media/images/programing-icos/github.png"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import pcScreen from "../media/images/pcScreen.png";
 import phoneScreenCut from "../media/images/phoneScreenCut.png"
 import videoGamesMobile from "../media/images/videoGamesMobile.png"
+import modernDesignMobile from "../media/images/modernDesignMobile.png"
+import modernDesign from "../media/images/modernDesign.png"
+import TommyEmmanuel from "../media/images/TommyEmmanuel.png"
+import TommyEmmanuelMobile from "../media/images/TommyEmmanuelMobile.png"
 
 
 
@@ -20,18 +24,36 @@ export const Projects = ()=>{
         demo: "https://leangames.vercel.app/",
         description:"Un proyecto individual usando la api de videogames RAWG en el que integre las tecnologias que aprendi en el curso de HENRY, muestra diferentes juegos de la api, los cuales podemos filtrar y ordenar de diferentes formas, ademas permite al usuario postear editar y eliminar su propio videojuego",
         img:videogames,
-    imgR:videoGamesMobile},
+        imgR:videoGamesMobile},
         {link:"https://github.com/Leandro-Larrea/Pokemon",
         demo: "https://pokemon-eight-plum.vercel.app/",
         description:"Un proyecto hecho con la PokeApi, permite al usuario buscar entre los diferentes pokemones asi como crear un pokemon personalizado",
         img:pokemons,
-    imgR:pokemons},
-         {link:"https://github.com/Leandro-Larrea/Edie-home-page",
-         description:"Eddie homepage es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en una imagen, tanto en su version desktop como mobile.",
+        imgR:pokemons},
+        {link:"https://github.com/Leandro-Larrea/Edie-home-page",
+        description:"Eddie homepage es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en una imagen, tanto en su version desktop como mobile.",
         img:eddie,
         imgR:eddieMobile,
-        demo:"https://airy-luck-feta.glitch.me/#"}
+        demo:"https://airy-luck-feta.glitch.me/#"},
+        {link:"https://github.com/Leandro-Larrea/Edie-home-page",
+         description:"Modern interior design es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en una imagen, tanto en su version desktop como mobile.",
+        img:modernDesign,
+        imgR:modernDesignMobile,
+        demo:"https://airy-luck-feta.glitch.me/#"},
+        {link:"https://octagonal-glorious-kitten.glitch.me/",
+         description:"La pagina de tributo fue mi primer proyecto, la primera vez que junte lo que aprendi en html y css e hice algo propio.",
+        img:TommyEmmanuel,
+        imgR:TommyEmmanuelMobile,
+        demo:"https://octagonal-glorious-kitten.glitch.me/"}
         ]
+
+        const [page, setPage] = useState(1)
+
+        const changePage = (e)=>{
+            e.preventDefault
+            console.log(e)
+            setPage(e)
+        }
 
     return(    
         <div className={`projects ${theme}`} id="projects">
@@ -43,9 +65,17 @@ export const Projects = ()=>{
                     </div>
                 </AnimationOnScroll>
             </div>
+            <div className="pages">
+                {a?.map((b, i) => {if(i < Math.ceil((a.length/3))){
+                    return (
+                    <button onClick={()=>changePage(i+1)}>{i + 1}</button>
+                    )
+                    }}
+                )}
+            </div>
             <div className={`projects-container ${theme}`}>
-                {a?.map(a=>
-                     <AnimationOnScroll duration={.5} animateIn="animate__zoomIn">
+                {a?.map((a, i) =>{if(i+1 <= page * 3 && i+1 > (page * 3) - 3)
+                    return <AnimationOnScroll duration={.5} animateIn="animate__zoomIn">
                          <div className={`projects-card ${theme}`} key={a.link} >
                             <div className="projects-img-container" >
                                 <img className="projects-desktop-screen" src={pcScreen}></img>
@@ -58,14 +88,19 @@ export const Projects = ()=>{
                                 </div>
                             </div>
                             <div className="projects-description">
-                                <p>{a.description}</p>
+                                <p className={`${theme}`}>{a.description}</p>
                             </div>
                             <div className="buttons-container" key={a.link} >
                                 <a key={a.link} className={`button1 ${theme}`}  href={a.demo?a.demo:a.link } target="_blank">Project</a>
-                                <a className={`button2 ${theme}`} href={a.link} target="_blank"><img src={github}/>{"<Code/>"}</a>
+                                <a className={`button2 ${theme}`} href={a.link} target="_blank"><img src={github}/>
+                                <p className={`buttons-code`}>{"<"}</p>
+                                <p className={`buttons-code`}>{"Code"}</p>
+                                <p className={`buttons-code`}>{"/>"}</p>
+                                </a>
                             </div>
                         </div>
                 </AnimationOnScroll>
+                }
                 )}
             </div>
         </div>

@@ -36,7 +36,9 @@ export const About = ()=>{
             <div className={`${theme} about-card light `}>            
                 <AnimationOnScroll duration={.5} animateIn="animate__fadeInRightBig">
                     <h1 className="light">Skills</h1>
-                    <h2>Frontend & Backend</h2>
+                    <h2>Frontend</h2>
+                    <h2> & </h2>
+                    <h2>Backend</h2>
                     <p>Estas son las herramientas con las que he estado trabajando y que sigo desarrollando cada día para ser un mejor programador.</p>
                 </AnimationOnScroll>
             </div>

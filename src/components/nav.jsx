@@ -24,13 +24,13 @@ export const Nav = () =>{
             <div className={"nav-container"}>
             <button 
                 className={theme} 
-                style={theme === "dark"?{background: "transparent", border:"none",}:{display:"none"}}
+                style={theme === "dark"?{cursor:"pointer", background: "transparent", border:"none",}:{display:"none"}}
                 onClick={x}>
                 <FaToggleOff color={theme} size={"24px"}/>
             </button>
             <button 
             className={theme} 
-            style={theme === "light"?{background: "transparent", border:"none",}:{display:"none"}}
+            style={theme === "light"?{cursor:"pointer", background: "transparent", border:"none",}:{display:"none"}}
                 onClick={x}>
                 <FaToggleOn color={theme} size={"24px"}/>
             </button>

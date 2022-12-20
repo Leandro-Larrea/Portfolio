@@ -45,6 +45,18 @@
         margin-bottom: 20px;
         background: linear-gradient(90deg, transparent, rgb(31, 109, 211));
     };
+    h2{
+        display: inline;
+        &:nth-child(2){
+            color: $colorRed;
+        }
+        &:nth-child(3){
+            color: $colorOrange;
+        }
+        &:nth-child(4){
+            color: $colorRed;
+        }
+    }
 
     p{
         font-size:var(--fontP);

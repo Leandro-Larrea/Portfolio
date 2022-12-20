@@ -1,9 +1,16 @@
 .projects{
     width: 100%;
     min-height: 100vh;
-    @include flex($direction: column, $wrap: wrap, $justify: space-around);
     position: relative;
+    @include flex($direction: column, $wrap: wrap, $justify: space-around);
+    .pages{
+        background-color: red;
+        position: relative;
+        z-index: 40;
+    }
     .projects-titles-container{
+        margin-bottom: 140px;       
+              
         box-sizing: border-box;
         align-self: flex-start;
         padding-left: 5%;
@@ -91,14 +98,11 @@
         }
     }
     
-    // div className="projects-mobile">
-    // <img className="projects-mobile-screen" src={phoneScreen}></img>
-    // <img className="projects-mobile-img" src={a.imgR}></img>
-
     .projects-description{
         margin-top: 50px;
         padding: 10px;
         min-height: 160px;
+        
     }
     // box-shadow: 3px 3px 20px rgb(66, 65, 65);
     transition: .3s;
@@ -106,23 +110,42 @@
         @include flex($justify: space-around);
         width: 100%;
         flex-basis: 70px;
-        a{
+
+        .button1 ,.button2{
             width: 90px;
             height: 35px;
             border-radius: 3px;
+            font-size: var(--fontA);
             cursor: pointer;
             border-radius: 10px;    
             transition: 0.2s;
             text-decoration: none;
             border: 1px solid;
             @include flex($justify: space-around);
-            &:hover{
-                box-shadow:  0px 0px 14px rgb(58, 147, 230);
-            }
+           
             img{
-                height: 20px;
+              display: none;
+            }
+
+        }
+        .button2{
+            border: none;
+            &:hover{
+                transform: scale(1.1);
             }
         }
+        .buttons-code{
+            &:nth-child(3){
+                color: $colorRed;
+            }
+            &:nth-child(2){
+                color: $colorOrange;
+            }
+            &:nth-child(4){
+                color: $colorOrange;
+            }
+        }
+        
     }
 }
 
