@@ -2,7 +2,7 @@
     overflow-x: hidden;
     min-height: 100vh;
     width: 100%;
-    background-color: $colorWhite;
+    // background-color: $colorWhite;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -28,7 +28,7 @@
     max-width: 350px;
     order: 1;
     grid-column: span 2;
-    color: $colorBlack;
+    // color: $colorBlack;
     height: 100%;
     @include flex($direction: column, $justify: center, $align:right);
     gap: 20px;
@@ -36,14 +36,14 @@
     box-sizing:border-box;
     border-radius: 5px;
     justify-self: right;
-    background: $colorWhite;
+    // background: $colorWhite;
     position: relative;
     text-align: right;
     h1{
         font-size: var(--fontH1);
         color: $colorWhite;
         margin-bottom: 20px;
-        background: linear-gradient(90deg, $colorWhite, rgb(31, 109, 211));
+        background: linear-gradient(90deg, transparent, rgb(31, 109, 211));
     };
 
     p{
@@ -65,7 +65,7 @@
         column-gap: 50px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background-color: $colorWhite;
+        // background-color: $colorWhite;
         max-width: 400px;
         max-height: 300px;
         .ico{

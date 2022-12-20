@@ -31,13 +31,13 @@
             content: "";
             width: $width;
             height: $height;
-            background-color: #e5e5f7;
+            background-color:transparent;
             justify-self: left;
             align-self: center;
             top: $top;
             margin: $margin;
             opacity: 1;
-            background-image: radial-gradient(#797a92 2px, $colorWhite 2px);
+            background-image: radial-gradient(#797a92 2px, transparent 2px);
             background-size: 40px 40px;
             position: absolute;
        }

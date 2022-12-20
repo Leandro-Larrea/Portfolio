@@ -21,20 +21,21 @@ import ico10 from "../media/images/programing-icos/express.png";
 import pc from  "../media/images/pc2.png";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import "animate.css/animate.min.css";
-
-
+import { ThemeContext } from "../context/ThemeContext";
+import { useContext } from "react";
 
 export const About = ()=>{
+    const { theme, setTheme } = useContext(ThemeContext);
     
     const frontIcos = [ico1, ico2, ico7, ico8, ico9]
     const backIcos = [ico6, ico4, ico3, ico5, ico10]
     const icos = frontIcos.concat(backIcos)
    return (
-        <div className="about-container" id="about">
+        <div className={`about-container ${theme}`} id="about">
             
-            <div className="about-card">            
+            <div className={`${theme} about-card light `}>            
                 <AnimationOnScroll duration={.5} animateIn="animate__fadeInRightBig">
-                    <h1>Skills</h1>
+                    <h1 className="light">Skills</h1>
                     <h2>Frontend & Backend</h2>
                     <p>Estas son las herramientas con las que he estado trabajando y que sigo desarrollando cada día para ser un mejor programador.</p>
                 </AnimationOnScroll>
