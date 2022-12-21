@@ -9,7 +9,7 @@ export const Nav = () =>{
     
     const scrollPosition = useScrollPostion()
     const { theme, setTheme } = useContext(ThemeContext);
-    console.log(scrollPosition)
+  
 
     const x = (e)=>{
         setTheme(theme ==="dark"? "light": "dark")

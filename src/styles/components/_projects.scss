@@ -2,9 +2,9 @@
     width: 100%;
     min-height: 100vh;
     position: relative;
-    @include flex($direction: column, $wrap: wrap, $justify: space-around);
+    @include flex($direction: column, $wrap: wrap, $justify: space-between);
     .pages{
-        margin-bottom: 25px;
+        display: flex;
         position: relative;
         z-index: 1;
         button{
@@ -13,7 +13,7 @@
             height: 50px;
             margin: 10px 10px 10px;
             border-radius: 3px;
-            background-color: transparent;
+            
             border: 1px solid none;
             font-size: 16px;
             cursor: pointer;
@@ -25,9 +25,7 @@
             }
         }
     }
-    .projects-titles-container{
-        margin-bottom: 140px;       
-              
+    .projects-titles-container{          
         box-sizing: border-box;
         align-self: flex-start;
         padding-left: 5%;
@@ -50,9 +48,9 @@
 }
 
 .projects-container{
-    @include flex($wrap: wrap);
+    @include flex();
     width: 100%;
-    gap: 5%;
+    gap: 100px;
     &:before{
         @include backgroundBefore($width:50%, $height:70%);
     }
@@ -60,9 +58,10 @@
 }
 
 .projects-card{
+    box-sizing: border-box;
     border-radius: 3px;
     @include flex($direction: column, $justify: space-between);
-    max-width: 400px;
+    width: 400px;
     background-color: transparent;
     border-radius: 5px;
     .projects-img-container{
@@ -118,7 +117,7 @@
     .projects-description{
         margin-top: 50px;
         padding: 10px;
-        min-height: 160px;
+        min-height: 120px;
         
     }
     // box-shadow: 3px 3px 20px rgb(66, 65, 65);

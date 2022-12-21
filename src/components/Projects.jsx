@@ -4,7 +4,7 @@ import eddie from "../media/images/eddie.png";
 import eddieMobile from "../media/images/eddieMobile.png";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import github from "../media/images/programing-icos/github.png"
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import pcScreen from "../media/images/pcScreen.png";
 import phoneScreenCut from "../media/images/phoneScreenCut.png"
@@ -13,6 +13,7 @@ import modernDesignMobile from "../media/images/modernDesignMobile.png"
 import modernDesign from "../media/images/modernDesign.png"
 import TommyEmmanuel from "../media/images/TommyEmmanuel.png"
 import TommyEmmanuelMobile from "../media/images/TommyEmmanuelMobile.png"
+import { useScrollPostion } from "../hooks/useScrollPosition";
 
 
 
@@ -44,17 +45,55 @@ export const Projects = ()=>{
          description:"La pagina de tributo fue mi primer proyecto, la primera vez que junte lo que aprendi en html y css e hice algo propio.",
         img:TommyEmmanuel,
         imgR:TommyEmmanuelMobile,
-        demo:"https://octagonal-glorious-kitten.glitch.me/"}
+        demo:"https://octagonal-glorious-kitten.glitch.me/"},
         ]
 
-        const [page, setPage] = useState(1)
+        const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+    
+    window.addEventListener('resize', handleWindowResize);
+    
+    return () => {
+        window.removeEventListener('resize', handleWindowResize);
+    };
+}, []);
+
+
+  function getWindowSize() {
+    const innerWidth = window.innerWidth;
+    return innerWidth
+  }
+
+        const [currentPage, setCurrentPage] = useState(1)
 
         const changePage = (e)=>{
             e.preventDefault
             console.log(e)
-            setPage(e)
+            setCurrentPage(e)
         }
+        let projectsPerPage = (Math.floor(windowSize/500))
+        let pagesPerWidth = (windowSize < 1000?
+                a.length: a.length % 2 === 0?
+                    a.length/Math.ceil(Math.ceil((windowSize/500))):
+                    Math.ceil(a.length+2)/Math.ceil(Math.ceil((windowSize/500)))
+            )
+    
+    useEffect(()=>{
+        console.log(pagesPerWidth)
+        if( currentPage > pagesPerWidth) setCurrentPage(pagesPerWidth)
+    },[pagesPerWidth])
 
+    const lastproject = currentPage * projectsPerPage;
+    const firstproject = lastproject - projectsPerPage
+    const renderprojects = a.slice(firstproject, lastproject)
+    const fcUpdate = (x)=>{
+      setCurrentPage(x)
+    }
+   
     return(    
         <div className={`projects ${theme}`} id="projects">
             <div className="projects-titles-container">
@@ -66,15 +105,20 @@ export const Projects = ()=>{
                 </AnimationOnScroll>
             </div>
             <div className="pages">
-                {a?.map((b, i) => {if(i < Math.ceil((a.length/3))){
+                {a?.map((b, i) => {if(i < pagesPerWidth){   
+                    {console.log(pagesPerWidth)}            
                     return (
-                    <button className={`${theme}`} onClick={()=>changePage(i+1)}>{i + 1}</button>
-                    )
+                   
+                        <AnimationOnScroll duration={.5} delay={i * 200} animateIn="animate__zoomIn">
+                            <button className={`${theme}`} onClick={()=>changePage(i+1)}>{i + 1}</button>
+                        </AnimationOnScroll>
+           
+                        )
                     }}
                 )}
             </div>
             <div className={`projects-container ${theme}`}>
-                {a?.map((a, i) =>{if(i+1 <= page * 3 && i+1 > (page * 3) - 3)
+                {renderprojects?.map((a, i) =>{
                     return <AnimationOnScroll duration={.5} animateIn="animate__zoomIn">
                          <div className={`projects-card ${theme}`} key={a.link} >
                             <div className="projects-img-container" >
