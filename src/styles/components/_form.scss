@@ -2,12 +2,17 @@
     @include flex($direction: column, $align: flex-start);
    gap: 10px;
    position: relative;
+   width: 100%;
+   max-width: 600px;
+   padding: 20px;
+   h1{
+    background-color: #1f79e1;
+   }
     .input{
             outline: none;       
             padding: 10px;
-            width: 90%;
-            
-            max-width: 200px;
+            width: 100%;
+            color: black;
             border: none;
             border-bottom: 1px solid;
             height: 28px;
@@ -21,20 +26,25 @@
        
     }
     textArea{
-        background-color: white;
+        background-color: $colorWhite;
         outline: none;
-       height: 140px;
-       width: 300px;
-       border-radius: 10px;
-       border:1px solid;padding: 10px;
+        height: 140px;
+        width: 100%;
+        border:1px solid;padding: 10px;
     }
 
     .submit{
         background: transparent;
-        width: 65px;
-        height: 30px;
-        align-self: flex-end;
-        border-radius: 10px;
+        width: 105px;
+        height: 40px;
+        align-self: center;
+        bottom: 0px;
+        position: absolute;
+        border: none;
+        color: white;
+        border-radius: 2px;
+        background-color: rgba($color: #1f79e1, $alpha: 1.0);
+        
         font-size: var(--fontA);
         cursor: pointer;
     }

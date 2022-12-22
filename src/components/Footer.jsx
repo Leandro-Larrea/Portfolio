@@ -14,29 +14,42 @@ export const Footer = () =>{
     const { theme, setTheme } = useContext(ThemeContext);
 
     return(
+
         <div className={`footer ${theme}`} id="contact">
-            <AnimationOnScroll  duration={.5} animateIn="animate__fadeInLeftBig">
-                <div className="contact-container">
-                    <a className={`button2 ${theme}`} target="blank">
-                        <img src={github}/>
-                        GitHub
-                    </a>
-                    <a className={`button2 ${theme}`} target="blank">
-                        <img src={whatsapp}/>
-                        whatsapp
-                    </a>
-                    <a className={`button2 ${theme}`} target="blank">
-                        <img src={linkedin}/>
-                        linkedin
-                    </a>
-                </div>
-            </AnimationOnScroll>
-            <AnimationOnScroll  duration={.5} animateIn="animate__fadeInLeftBig">
+           <AnimationOnScroll  duration={.5} animateIn="animate__fadeInRightBig">
+            <div className="h1-containers">
+                <h1>Enviame</h1><h1> un</h1><h1> mensaje</h1>
+           </div>
+            </AnimationOnScroll> 
+    
+            <AnimationOnScroll  duration={.5} delay={300} animateIn="animate__fadeInRightBig">
                 <div className="mail-container">
                    
                     <ContactUs></ContactUs>
                 </div>
             </AnimationOnScroll>
+                <div className="contact-container">
+                    <AnimationOnScroll duration={.5} offset={10} animateIn="animate__zoomIn">
+                        <a className={`button2 ${theme}`} target="blank">
+                            <img src={github}/>
+                            GitHub
+                        </a>
+                    </AnimationOnScroll>
+                    <AnimationOnScroll duration={.5} offset={10} delay={300} animateIn="animate__zoomIn">
+                        <a className={`button2 ${theme}`} target="blank">
+                            <img src={whatsapp}/>
+                            whatsapp
+                        </a>
+                    </AnimationOnScroll>
+                    <AnimationOnScroll duration={.5} offset={10} delay={600} animateIn="animate__zoomIn">
+                        <a className={`button2 ${theme}`} target="blank">
+                            <img src={linkedin}/>
+                            linkedin
+                        </a>
+                    </AnimationOnScroll>
+                </div>
+
+            
             
         </div>
     )

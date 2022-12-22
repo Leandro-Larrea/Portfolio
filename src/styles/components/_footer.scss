@@ -1,16 +1,36 @@
 .footer{
     width: 100%;
-    @include flex($justify: space-between);
+    @include flex($justify: space-between, $direction: column);
+    overflow: hidden;
     height: 100vh;
     gap: 5%;
     padding: 5%;
-    .contact-container{
-        width: 350px;
-        min-height: 300px;
+    .h1-containers{
+        h1{font-size: var(--fontH1);
+            &:nth-child(1){
+                color: $colorRed;
+            }
+            &:nth-child(2){
+                color: $colorOrange;
+            }
+            &:nth-child(3){
+                color: $colorRed;
+            }
+            display: inline;}
+            box-sizing: border-box;
+            min-width: 100vw;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            padding-right: 5%;
+            
+     
     }
     .contact-container{
-        @include flex($justify: flex-start, $direction: column);
-        gap: 15px;
+        
+      
+        @include flex($justify: flex-start);
+        gap: 35px;
         a{
             font-size: var(--fontA);
             cursor: pointer;

@@ -1,6 +1,7 @@
 .projects{
     width: 100%;
-    min-height: 100vh;
+    box-sizing: border-box;
+    height: 100vh;
     position: relative;
     @include flex($direction: column, $wrap: wrap, $justify: space-between);
     .pages{

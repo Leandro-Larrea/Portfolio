@@ -100,7 +100,7 @@ export const Projects = ()=>{
                 <AnimationOnScroll duration={.5} animateIn="animate__fadeInLeftBig">
                     <div className="titles">
                         <h1>Mis</h1> 
-                            <h1>proyectos</h1>
+                            <h1> proyectos</h1>
                         <h2></h2>
                     </div>
                 </AnimationOnScroll>

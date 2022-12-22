@@ -6,11 +6,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    overflow: hidden;
 }
 
 .about-img-container{
     order: 3;
-    height: 100vh;
     position: relative;
     &:before{
         @include backgroundBefore();
@@ -20,8 +20,8 @@
 .img{
     position: relative;
     justify-self: left;
-    width: 100%;
-    margin-bottom: 10%;  
+   top: -50px;
+    max-width: 100%; 
 }
 
 .about-card{
@@ -43,7 +43,8 @@
         font-size: var(--fontH1);
         color: $colorWhite;
         margin-bottom: 20px;
-        background: linear-gradient(90deg, transparent, rgb(31, 109, 211));
+        background: linear-gradient(90deg, transparent, $colorPurple);
+        padding: 0 10px;
     };
     h2{
         display: inline;

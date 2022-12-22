@@ -15,21 +15,24 @@ export const ContactUs = () => {
     emailjs.sendForm(VITE_SERVICE_ID, VITE_TEMPLATE_ID, form.current, VITE_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
+          form.current.childNodes.forEach(e=>{
+            e.value = ""
+          })
       }, (error) => {
           console.log(error.text);
       });
+      
   };
 
   return (
     <form ref={form} className="form" onSubmit={sendEmail}>
       <label className="label" htmlFor='user_name'>Name</label>
-      <img className="form-img" src={letter}></img>
       <input className={`input ${theme}`} type="text" name="user_name" id='"user_name"' />
       <label className="label" htmlFor='user_email'>Email</label>
       <input className={`input ${theme}`} type="email" name="user_email" />
       <label className="label" htmlFor='message'>Message</label>
       <textarea className={`${theme}`} name="message" />
-      <input className={`submit ${theme}`}  type="submit" value="Send" />
+      <button className={`submit ${theme}`} type="submit">Enviar</button>
     </form>
   );
 };

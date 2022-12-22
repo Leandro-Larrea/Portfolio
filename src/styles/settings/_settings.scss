@@ -16,9 +16,10 @@
     $colorDarkGreen: #f2f8f6;
     $colorRed: rgb(221, 58, 121);
     $colorOrange: #FFBA00;
-    $colorBlack:rgba(26, 24, 24,1);
-    $colorWhite: rgb(245, 243, 243);
+    $colorBlack:rgb(15, 12, 21);
+    $colorWhite: rgb(254, 254, 255);
     $colorWhiteOpacity: rgb(255, 255, 255, .6);
+    $colorPurple: #5c15e2;
     //mixins
     @mixin flex($direction: row, $align: center, $justify: center, $wrap: nowrap){
         display: flex;
