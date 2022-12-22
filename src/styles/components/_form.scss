@@ -1,0 +1,47 @@
+.form{
+    @include flex($direction: column, $align: flex-start);
+   gap: 10px;
+   position: relative;
+    .input{
+            outline: none;       
+            padding: 10px;
+            width: 90%;
+            
+            max-width: 200px;
+            border: none;
+            border-bottom: 1px solid;
+            height: 28px;
+            background-color: $colorWhite;
+            
+           
+    }
+    .label{
+        display: block;
+        position: relative;
+       
+    }
+    textArea{
+        background-color: white;
+        outline: none;
+       height: 140px;
+       width: 300px;
+       border-radius: 10px;
+       border:1px solid;padding: 10px;
+    }
+
+    .submit{
+        background: transparent;
+        width: 65px;
+        height: 30px;
+        align-self: flex-end;
+        border-radius: 10px;
+        font-size: var(--fontA);
+        cursor: pointer;
+    }
+    .form-img{
+        width: 150px;
+        position: absolute;
+        right: -50px;
+        top: 0px;
+    }
+}

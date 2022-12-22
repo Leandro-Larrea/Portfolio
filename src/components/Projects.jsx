@@ -1,5 +1,6 @@
 import videogames from "../media/images/videogames.png";
 import pokemons from "../media/images/pokemons.png";
+import pokemonsMobile from "../media/images/pokemonsMobile.png";
 import eddie from "../media/images/eddie.png";
 import eddieMobile from "../media/images/eddieMobile.png";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -30,7 +31,7 @@ export const Projects = ()=>{
         demo: "https://pokemon-eight-plum.vercel.app/",
         description:"Un proyecto hecho con la PokeApi, permite al usuario buscar entre los diferentes pokemones asi como crear un pokemon personalizado",
         img:pokemons,
-        imgR:pokemons},
+        imgR:pokemonsMobile},
         {link:"https://github.com/Leandro-Larrea/Edie-home-page",
         description:"Eddie homepage es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en una imagen, tanto en su version desktop como mobile.",
         img:eddie,
@@ -40,7 +41,7 @@ export const Projects = ()=>{
          description:"Modern interior design es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en una imagen, tanto en su version desktop como mobile.",
         img:modernDesign,
         imgR:modernDesignMobile,
-        demo:"https://airy-luck-feta.glitch.me/#"},
+        demo:"https://exclusive-cubic-woodpecker.glitch.me/interior-consultant-master/"},
         {link:"https://octagonal-glorious-kitten.glitch.me/",
          description:"La pagina de tributo fue mi primer proyecto, la primera vez que junte lo que aprendi en html y css e hice algo propio.",
         img:TommyEmmanuel,
@@ -62,7 +63,6 @@ export const Projects = ()=>{
     };
 }, []);
 
-
   function getWindowSize() {
     const innerWidth = window.innerWidth;
     return innerWidth
@@ -72,7 +72,7 @@ export const Projects = ()=>{
 
         const changePage = (e)=>{
             e.preventDefault
-            console.log(e)
+     
             setCurrentPage(e)
         }
         let projectsPerPage = (Math.floor(windowSize/500))
@@ -83,7 +83,7 @@ export const Projects = ()=>{
             )
     
     useEffect(()=>{
-        console.log(pagesPerWidth)
+      
         if( currentPage > pagesPerWidth) setCurrentPage(pagesPerWidth)
     },[pagesPerWidth])
 
@@ -99,14 +99,15 @@ export const Projects = ()=>{
             <div className="projects-titles-container">
                 <AnimationOnScroll duration={.5} animateIn="animate__fadeInLeftBig">
                     <div className="titles">
-                        <h1>Mis</h1> <h1>proyectos</h1>
+                        <h1>Mis</h1> 
+                            <h1>proyectos</h1>
                         <h2></h2>
                     </div>
                 </AnimationOnScroll>
             </div>
             <div className="pages">
                 {a?.map((b, i) => {if(i < pagesPerWidth){   
-                    {console.log(pagesPerWidth)}            
+                              
                     return (
                    
                         <AnimationOnScroll duration={.5} delay={i * 200} animateIn="animate__zoomIn">
