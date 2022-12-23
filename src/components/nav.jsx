@@ -35,7 +35,8 @@ export const Nav = () =>{
             </button>
                 <a href="#contact" className={`${theme}`}>Contacto</a>
                 <a href="#projects" className={`${theme}`}>Proyectos</a>
-                <a href="#about" className={`${theme}`}>Tecnologias</a>
+                <a href="#skills" className={`${theme}`}>Tecnologias</a>
+                <a href="#about" className={`${theme}`}>Sobre Mi</a>
                 <a href="#home" className={`${theme}`}>Inicio</a>
             </div>
         </nav>

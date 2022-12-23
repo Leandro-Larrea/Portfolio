@@ -1,7 +1,8 @@
-import { About } from "./About"
+import { Skills } from "./Skills"
 import { Footer } from "./Footer"
 import { Nav } from "./nav"
 import { Projects } from "./Projects"
+import { About } from "./About"
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import "animate.css/animate.min.css";
 
@@ -19,7 +20,8 @@ export const Home = () =>{
                 </div>
                 </div>
             </header>
-            <About></About> 
+            <About></About>
+            <Skills></Skills> 
             <Projects></Projects>
             <Footer></Footer>
         </div>

@@ -6,12 +6,13 @@
     top: 0;
     height: 50px;
     width: 100%;
-   @include flex($justify: space-between);
+   @include flex();
     transition: 0.4s;
     animation: appears .5s linear;
     .ico-container{
         height: 100%;
         padding: 5px;
+        flex-basis: 5%;
         .logo{
             color: $colorWhite;
             border: 1px solid $colorWhite;
@@ -33,7 +34,7 @@
         justify-content: center; 
         gap: 10%;
         position: relative;
-        max-width: 100%;
+     
         a{
             color: $colorWhiteOpacity;
             text-decoration: none;
@@ -53,9 +54,7 @@
     
 }
 
-.ico-container{
-    flex-basis: 100%;
-}
+
 
 
 
