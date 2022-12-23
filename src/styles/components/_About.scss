@@ -7,6 +7,7 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     overflow: hidden;
+    gap: 50px;
 }
 
 .about-img-container{
@@ -20,7 +21,7 @@
 .img{
     position: relative;
     justify-self: left;
-   top: -50px;
+    top: -30%;
     max-width: 100%; 
 }
 
@@ -36,26 +37,26 @@
     box-sizing:border-box;
     border-radius: 5px;
     justify-self: right;
-    // background: $colorWhite;
     position: relative;
     text-align: right;
     h1{
         font-size: var(--fontH1);
-        color: $colorWhite;
+        background-color: transparent;
+        color: $colorRed;
         margin-bottom: 20px;
-        background: linear-gradient(90deg, transparent, $colorPurple);
         padding: 0 10px;
     };
     h2{
         display: inline;
         &:nth-child(2){
-            color: $colorRed;
-        }
-        &:nth-child(3){
             color: $colorOrange;
         }
-        &:nth-child(4){
+        &:nth-child(3){
             color: $colorRed;
+            color: $colorRed;
+        }
+        &:nth-child(4){
+            color: $colorOrange;
         }
     }
 
@@ -72,22 +73,37 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
-    margin-top: 50px;
-    .skills-container{
+    max-height: 40vh;
+    
+    .skills-container{    
         position: relative;
         column-gap: 50px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        // background-color: $colorWhite;
-        max-width: 400px;
-        max-height: 300px;
-        .ico{
-            max-width: 50px;
-            max-height: 50px;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        .ico-div{
+            margin: 0;
+            padding: 0;
+    
+            max-width: 3vw;
+            min-width: 40px;
             &:nth-child(3){
                 grid-column: span 2;
                 justify-self: center;
             }
+        }
+        grid-template-columns: 1fr 1fr;
+        // background-color: $colorWhite;
+        min-width: 15vw;
+     
+        .ico{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            
+            
+            
         }
     }
 }

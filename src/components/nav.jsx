@@ -9,7 +9,6 @@ export const Nav = () =>{
     
     const scrollPosition = useScrollPostion()
     const { theme, setTheme } = useContext(ThemeContext);
-  
 
     const x = (e)=>{
         setTheme(theme ==="dark"? "light": "dark")
@@ -34,10 +33,10 @@ export const Nav = () =>{
                 onClick={x}>
                 <FaToggleOn color={theme} size={"24px"}/>
             </button>
-                <a href="#contact" className={`${theme}`}>Contact</a>
-                <a href="#projects" className={`${theme}`}>Projects</a>
-                <a href="#about" className={`${theme}`}>About</a>
-                <a href="#home" className={`${theme}`}>Home</a>
+                <a href="#contact" className={`${theme}`}>Contacto</a>
+                <a href="#projects" className={`${theme}`}>Proyectos</a>
+                <a href="#about" className={`${theme}`}>Tecnologias</a>
+                <a href="#home" className={`${theme}`}>Inicio</a>
             </div>
         </nav>
     )

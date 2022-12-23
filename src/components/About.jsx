@@ -31,11 +31,11 @@ export const About = ()=>{
     const backIcos = [ico6, ico4, ico3, ico5, ico10]
     const icos = frontIcos.concat(backIcos)
    return (
-        <div className={`about-container ${theme}`} id="about">
+        <div className={`about-container ${theme}`} >
             
-            <div className={`${theme} about-card light `}>            
+            <div className={`${theme} about-card light ` } id="about">            
                 <AnimationOnScroll duration={.5} animateIn="animate__fadeInRightBig">
-                    <h1 className="light">Skills</h1>
+                    <h1 className="light">Tecnologias</h1>
                     <h2>Frontend</h2>
                     <h2> & </h2>
                     <h2>Backend</h2>
@@ -50,18 +50,18 @@ export const About = ()=>{
             <div className="skills-main">
                 <div className="skills-container">
                     {frontIcos?.map((e,i) => 
-                    <div className="ico" key={i}>
-                        <AnimationOnScroll  duration={Math.random()} animateIn="animate__zoomIn">
+                    <div className="ico-div" key={i}>
+                        <AnimationOnScroll  duration={Math.random()}  offset={0} animateIn="animate__zoomIn">
                             <img  className="ico" src={e}/>
-                            </AnimationOnScroll>
+                        </AnimationOnScroll>
                     </div>)}
                 </div>
                 <div className="skills-container">
                     {backIcos?.map((e,i) => 
-                    <div className="ico" key={i}>
+                    <div className="ico-div" key={i}>
                         <AnimationOnScroll  duration={.5} animateIn="animate__zoomIn">
                             <img  className="ico" src={e}/>
-                            </AnimationOnScroll>
+                        </AnimationOnScroll>
                     </div>)}
                 </div>
                 <div className="text-container">

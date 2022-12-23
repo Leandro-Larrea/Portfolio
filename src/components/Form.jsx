@@ -26,11 +26,11 @@ export const ContactUs = () => {
 
   return (
     <form ref={form} className="form" onSubmit={sendEmail}>
-      <label className="label" htmlFor='user_name'>Name</label>
-      <input className={`input ${theme}`} type="text" name="user_name" id='"user_name"' />
-      <label className="label" htmlFor='user_email'>Email</label>
-      <input className={`input ${theme}`} type="email" name="user_email" />
-      <label className="label" htmlFor='message'>Message</label>
+      
+      <input placeholder='Nombre*' className={`input ${theme}`} type="text" name="user_name" id='"user_name"' />
+      
+      <input placeholder='marcelito' className={`input ${theme}`} type="email" name="user_email" />
+      
       <textarea className={`${theme}`} name="message" />
       <button className={`submit ${theme}`} type="submit">Enviar</button>
     </form>

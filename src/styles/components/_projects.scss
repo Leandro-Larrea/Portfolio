@@ -14,14 +14,13 @@
             height: 50px;
             margin: 10px 10px 10px;
             border-radius: 3px;
-            
-            border: 1px solid none;
+            border: none;
             font-size: 16px;
             cursor: pointer;
             transition: 0.1s;
             &:hover{
                 transform: scale(1.1);
-                background-color: rgb(48, 131, 190);
+                background-color:$colorPurple;
                 color: white;
             }
         }
@@ -118,8 +117,7 @@
     .projects-description{
         margin-top: 50px;
         padding: 10px;
-        min-height: 120px;
-        
+        min-height: 120px;   
     }
     // box-shadow: 3px 3px 20px rgb(66, 65, 65);
     transition: .3s;
@@ -137,7 +135,7 @@
             border-radius: 10px;    
             transition: 0.2s;
             text-decoration: none;
-            border: 1px solid;
+            border: .5px solid;
             @include flex($justify: space-around);
            
             img{

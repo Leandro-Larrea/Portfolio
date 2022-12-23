@@ -30,19 +30,19 @@ export const Footer = () =>{
             </AnimationOnScroll>
                 <div className="contact-container">
                     <AnimationOnScroll duration={.5} offset={10} animateIn="animate__zoomIn">
-                        <a className={`button2 ${theme}`} target="blank">
+                        <a className={`button2 ${theme}`} href={"https://github.com/Leandro-Larrea"} target="_blank">
                             <img src={github}/>
                             GitHub
                         </a>
                     </AnimationOnScroll>
                     <AnimationOnScroll duration={.5} offset={10} delay={300} animateIn="animate__zoomIn">
-                        <a className={`button2 ${theme}`} target="blank">
+                        <a className={`button2 ${theme}`} href="https://api.whatsapp.com/send?phone=542314440302" target="_blank" rel="noopener noreferrer" >
                             <img src={whatsapp}/>
-                            whatsapp
+                            +54-2313-440302
                         </a>
                     </AnimationOnScroll>
                     <AnimationOnScroll duration={.5} offset={10} delay={600} animateIn="animate__zoomIn">
-                        <a className={`button2 ${theme}`} target="blank">
+                        <a className={`button2 ${theme}`} href={"https://www.linkedin.com/in/leandro-gustavo-larrea-11bb90249/"}target="_blank">
                             <img src={linkedin}/>
                             linkedin
                         </a>

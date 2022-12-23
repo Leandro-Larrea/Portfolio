@@ -32,14 +32,16 @@
         @include flex($justify: flex-start);
         gap: 35px;
         a{
+            text-decoration: none;
             font-size: var(--fontA);
             cursor: pointer;
             @include flex($justify: space-between);
-            width: 40%;
+            
             &:hover{
                 transform: scale(1.1);
             }
             img{
+                margin: 10px;
                 width: 40px;
                 &:hover{
                     transform: scale(1.1);
