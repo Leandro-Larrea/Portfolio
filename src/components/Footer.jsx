@@ -22,12 +22,12 @@ export const Footer = () =>{
            </div>
             </AnimationOnScroll> 
     
-            <AnimationOnScroll  duration={.5} delay={300} animateIn="animate__fadeInRightBig">
+      
                 <div className="mail-container">
                    
                     <ContactUs></ContactUs>
                 </div>
-            </AnimationOnScroll>
+       
                 <div className="contact-container">
                     <AnimationOnScroll duration={.5} offset={10} animateIn="animate__zoomIn">
                         <a className={`button2 ${theme}`} href={"https://github.com/Leandro-Larrea"} target="_blank">

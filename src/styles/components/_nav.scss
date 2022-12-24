@@ -83,14 +83,28 @@
             flex-direction: row-reverse;
             height: 100%;
             align-items: center;
+            align-content: center;
+            height: 100%;
             display: flex;
             justify-content: center;
             gap: 10%;
             position: relative;
             width: 100%;
-            a{
+            a{  
+                text-align: center;
                 text-decoration: none;
-               
+                transition: .1;
+               &:hover{
+                color: $colorRed;
+                transform: scale(1.025);
+                transform: none;
+               }
+            }
+            button{
+                transition: .1;
+                &:hover{
+                    color: $colorRed;
+                   }
             }
         }   
     }
