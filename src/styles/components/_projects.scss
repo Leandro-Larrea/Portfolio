@@ -1,5 +1,4 @@
 .projects{
-    width: 100%;
     box-sizing: border-box;
     height: 100vh;
     position: relative;
@@ -30,6 +29,7 @@
         align-self: flex-start;
         padding-left: 5%;
         h1{
+            text-shadow: 1px 1px 2px $colorBlack;
             font-size: var(--fontH1);
             display: inline;
             &:nth-child(1){

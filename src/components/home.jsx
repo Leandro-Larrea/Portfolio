@@ -5,11 +5,14 @@ import { Projects } from "./Projects"
 import { About } from "./About"
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import "animate.css/animate.min.css";
-
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export const Home = () =>{
+    const { theme, setTheme } = useContext(ThemeContext);
+
     return(
-        <div className="main">
+        <div className={`main ${theme}`}>
             <header className="header" id="home">
                 <Nav/>
                 <div className="container">

@@ -111,7 +111,7 @@ export const Projects = ()=>{
                     return (
                    
                         <AnimationOnScroll duration={.5} delay={i * 200} animateIn="animate__zoomIn">
-                            <button className={`${theme}`} onClick={()=>changePage(i+1)}>{i + 1}</button>
+                            <button key={i} className={`${theme}`} onClick={()=>changePage(i+1)}>{i + 1}</button>
                         </AnimationOnScroll>
            
                         )
@@ -120,7 +120,7 @@ export const Projects = ()=>{
             </div>
             <div className={`projects-container ${theme}`}>
                 {renderprojects?.map((a, i) =>{
-                    return <AnimationOnScroll duration={.5} animateIn="animate__zoomIn">
+                    return <AnimationOnScroll key={i} duration={.3} animateIn="animate__zoomIn">
                          <div className={`projects-card ${theme}`} key={a.link} >
                             <div className="projects-img-container" >
                                 <img className="projects-desktop-screen" src={pcScreen}></img>

@@ -1,4 +1,9 @@
 //variables
+@media screen and (max-width: 700px){
+    *{
+        grid-column: span 2;
+    }
+}
 :root{
     --fontP: 1rem;
     --fontA: 1rem;
@@ -17,7 +22,7 @@
     $colorRed: rgb(221, 58, 121);
     $colorOrange: #FFBA00;
     $colorBlack:rgb(15, 12, 21);
-    $colorWhite: rgb(254, 254, 255);
+    $colorWhite: rgb(228, 228, 228);
     $colorWhiteOpacity: rgb(255, 255, 255, .6);
     $colorPurple: #5c15e2;
     //mixins

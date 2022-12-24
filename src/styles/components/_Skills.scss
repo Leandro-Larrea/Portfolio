@@ -1,13 +1,13 @@
 .tecnologias-container{
     overflow-x: hidden;
     min-height: 100vh;
-    width: 100%;
     // background-color: $colorWhite;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     overflow: hidden;
     gap: 50px;
+    box-sizing: border-box;
 }
 
 .skills-img-container{
@@ -15,7 +15,7 @@
     grid-row: span 2;
     position: relative;
     &:before{
-        @include backgroundBefore();
+        @include backgroundBefore($height: 60%, $top: -300px);
    }
 }
 
@@ -46,8 +46,10 @@
         color: $colorRed;
         margin-bottom: 20px;
         padding: 0 10px;
+        text-shadow: 1px 1px 2px $colorBlack;
     };
     h2{
+        text-shadow: 1px 1px 2px $colorBlack;
         display: inline;
         &:nth-child(2){
             color: $colorOrange;
