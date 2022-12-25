@@ -21,21 +21,19 @@
         position: absolute;
         box-sizing: border-box;
         top: 50%;
-           z-index: 1;
-           left: 20%;
-           width: 60%;
+            z-index: 1;
+            left: 20%;
+            width: 60%;
            .text{
-               
-               font-family: 'Playfair Display', serif;
-               font-size: var(--fontP);
-               box-shadow: 0 0 4px;
-               position: relative;
-               z-index: 15;
-               width: 100%;
-               right: 45%;
-               padding: 10%;
-               top: -20vh;
-              
+                font-family: 'Playfair Display', serif;
+                font-size: var(--fontP);
+                box-shadow: 0 0 4px;
+                position: relative;
+                z-index: 15;
+                width: 100%;
+                right: 45%;
+                padding: 10%;
+                top: -20vh; 
            }
        }
         position: relative;
@@ -95,9 +93,22 @@
                 top: 10vh;
                 background: transparent;
             }
-        }
-       
-       
+        } 
+    }
+}
+
+.customLeftRight{
+    animation: move 0.0s linear;
+}
+@keyframes move{
+    0%{
+        transform: translate(50%, 50%);
         
+    }
+    100%{
+        ransform: translate(0, 0);
+        
+        
+       
     }
 }

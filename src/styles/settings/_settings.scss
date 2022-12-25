@@ -5,15 +5,21 @@
     }
 }
 :root{
-    --fontP: 1rem;
+    --fontP: 0.8rem;
     --fontA: 1rem;
     --fontH2: 2.5rem;
     --fontH1: 3rem;
     @media screen and (min-width: 700px){
-        --fontP: 1.1rem;
-        --fontA: 1.2rem;
-        --fontH2: 2.5rem;
+        --fontP: 1rem;
+        --fontA: 1.1rem;
+        --fontH2: 2.4rem;
         --fontH1: 3.2rem;
+    }
+    @media screen and (min-width: 1800px){
+        --fontP: 1.2rem;
+        --fontA: 1.3rem;
+        --fontH2: 2.6rem;
+        --fontH1: 3.5rem;
     }
 }
     //colors

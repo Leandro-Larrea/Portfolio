@@ -27,8 +27,8 @@
 }
 
 .skills-card{
-    max-width: 350px;
     order: 1;
+    max-width: 500px;
     grid-column: span 2;
     // color: $colorBlack;
     height: 100%;
@@ -40,31 +40,45 @@
     justify-self: right;
     position: relative;
     text-align: right;
-    h1{
-        font-size: var(--fontH1);
-        background-color: transparent;
-        color: $colorRed;
-        margin-bottom: 20px;
-        padding: 0 10px;
-  
-    };
-    h2{
+    .skills-position{
+        top: 5%;
+        position: relative;
+        border: 2px solid $colorRed;
+        padding: 5%;
+        z-index: 1;
+    div{
+        position: relative;
+        bottom: 30%;
+        right: 40%;
+        padding: 10%;
+        box-shadow: 0 0 5px;
 
-        display: inline;
-        &:nth-child(2){
-            color: $colorOrange;
-        }
-        &:nth-child(3){
+        h1{
+            font-size: var(--fontH1);
+            background-color: transparent;
             color: $colorRed;
-            color: $colorRed;
-        }
-        &:nth-child(4){
-            color: $colorOrange;
-        }
-    }
-    p{
-        font-size:var(--fontP);
+            margin-bottom: 20px;
+            padding: 0 10px;
         };
+
+        h2{
+            display: inline;
+            &:nth-child(2){
+                color: $colorOrange;
+            }
+            &:nth-child(3){
+                color: $colorRed;
+                color: $colorRed;
+            }
+            &:nth-child(4){
+                color: $colorOrange;
+            }
+        }
+        p{
+            font-size:var(--fontP);
+            };}
+    }
+    
     margin: 5%;
 }
 
@@ -77,18 +91,23 @@
     .skills-container{    
         position: relative;
         column-gap: 50px;
+        top: -20%;
         display: grid;
         align-items: center;
-        justify-items: center;
+        justify-items: right;
         .ico-div{
             margin: 0;
             padding: 0;
             max-width: 3vw;
             min-width: 40px;
-            margin: 5%;
+            margin: 7%;
             &:nth-child(3){
-                grid-column: span 2;
-                justify-self: center;
+                
+                justify-self: left;
+            }
+            &:nth-child(4){
+                
+                justify-self: left;
             }
         }
         grid-template-columns: 1fr 1fr;

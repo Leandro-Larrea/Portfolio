@@ -16,7 +16,7 @@ export const Nav = () =>{
     
 
     return(
-        <nav className={scrollPosition < 500? "nav": `scroll ${theme}`} >
+        <nav className={scrollPosition < 500? "nav animationOff": `scroll ${theme}`} >
             <div className="ico-container">
                 <p className={`logo ${theme}`}>L L</p>
             </div>
