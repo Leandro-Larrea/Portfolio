@@ -21,12 +21,18 @@ export const Nav = () =>{
                 <p className={`logo ${theme}`}>L L</p>
             </div>
             <div className={"nav-container"}>
+             <div className="hamburger">
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </div>
             <button 
                 className={theme} 
                 style={theme === "dark"?{cursor:"pointer", background: "transparent", border:"none",}:{display:"none"}}
                 onClick={x}>
                 <FaToggleOff color={theme} size={"24px"}/>
             </button>
+           
             <button 
             className={theme} 
             style={theme === "light"?{cursor:"pointer", background: "transparent", border:"none",}:{display:"none"}}
@@ -39,6 +45,7 @@ export const Nav = () =>{
                 <a href="#about" className={`${theme}`}>Sobre Mi</a>
                 <a href="#home" className={`${theme}`}>Inicio</a>
             </div>
+            
         </nav>
     )
 }
