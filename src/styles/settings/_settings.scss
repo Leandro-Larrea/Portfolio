@@ -74,7 +74,6 @@ body::-webkit-scrollbar-thumb {
         background-size: 40px 40px;
         position: absolute;
     }
-
    @mixin nav($boxShadow: 0, $position: absolute){
     position: $position;
     z-index: 60;
@@ -84,9 +83,7 @@ body::-webkit-scrollbar-thumb {
     height: 50px;
     width: 100%;
     box-shadow: 0px 0px $boxShadow ;
-   @include flex();
-    transition: 0.4s;
-    
+   @include flex($justify: space-between);
     .ico-container{
         height: 100%;
         padding: 5px;
@@ -108,12 +105,32 @@ body::-webkit-scrollbar-thumb {
         align-content: center;
         height: 100%;
         display: flex;
-        justify-content: center;
-        gap: 10%;
+        justify-content: space-between; 
         position: relative;
-        width: 100%;
+        flex-basis: 100%;
     } 
-    button{
+    .hamburger{
+        display: none;
+        div{
+            margin: 5px;
+            @include flex($direction: column, $justify: space-between);
+            width: 30px;
+            height: 100%;
+            cursor: pointer;
+            &:hover{
+                .line{
+                    border-color: $colorRed;
+                }
+            }
+            .line{
+                background-color: transparent;
+                border-top: 3px solid;
+                width: 100%;
+            }
+        }
+    }
+button{
+    padding: 5px;
         transition: .1;
         &:hover{
             color: $colorRed;

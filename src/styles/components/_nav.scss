@@ -1,40 +1,4 @@
-.nav{
-//     position: absolute;
-//     z-index: 60;
-//     animation: scroll 0.3s linear;
-//     opacity: 1;
-//     top: 0;
-//     height: 50px;
-//     width: 100%;
-//    @include flex();
-//     transition: 0.4s;
-//     animation: appears .5s linear;
-//     .ico-container{
-//         height: 100%;
-//         padding: 5px;
-//         flex-basis: 5%;
-//         .logo{
-//             color: $colorWhite;
-//             border: 1px solid $colorWhite;
-//             background-color: transparent;
-//             text-align: center;
-//             display: flex;
-//             width: 50px;
-//             align-items: center;
-//             justify-content: center;
-//             height: 100%;
-//         }
-//     }
-//     .nav-container{
-//         flex-basis: 100%;
-//         flex-direction: row-reverse;
-//         height: 100%;
-//         align-items: center;
-//         display: flex;
-//         justify-content: center; 
-//         gap: 10%;
-//         position: relative;
-     
+.nav{    
 @include nav();   
 a{
         color: $colorWhiteOpacity;
@@ -50,56 +14,19 @@ a{
             color: $colorWhite;
         }
     }
+    button{
+        color: $colorWhite;
+    }
     .logo{
         @include logo()
     }
 }
-
+body{
+    position: relative;
+}
 
 .scroll{
-//         background-color: $colorWhite;
-//         position: fixed;
-//         z-index: 60;
-//         height: 50px;
-//         width: 100%;
-//         display: flex;
-//         animation: scroll 0.3s linear;
-//         box-shadow: 0px 0px 5px ;
-//         .ico-container{
-//             padding: 5px;
-//             .logo{
-//                 border: 1px solid;
-//                 text-align: center;
-//                 display: flex;
-//                 width: 50px;
-//                 align-items: center;
-//                 justify-content: center;
-//                 height: 100%;
-//             }
-//         }
-//         .nav-container{
-//             flex-direction: row-reverse;
-//             height: 100%;
-//             align-items: center;
-//             align-content: center;
-//             height: 100%;
-//             display: flex;
-//             justify-content: center;
-//             gap: 10%;
-//             position: relative;
-//             width: 100%;
-//         a{  font-size: var(--fontA);
-//             text-align: center;
-//             text-decoration: none;
-//             transition: .1;
-//            &:hover{
-//             color: $colorRed;
-//             transform: none;
-//            }
-//         }
-//     }
-// }
-        @include nav($position: fixed ,$boxShadow: 5px);
+        @include nav($position:fixed, $boxShadow: 5px);
             a{  font-size: var(--fontA);
                 text-align: center;
                 text-decoration: none;
@@ -109,13 +36,9 @@ a{
                 transform: none;
                }
             }
-            button{
-                transition: .1;
-                &:hover{
-                    color: $colorRed;
-               }
-            }  
-    }
+            
+        }   
+    
 
 @keyframes appears{
     0%{
@@ -149,4 +72,54 @@ a{
     }
 }
 
+.animationResponsiveOff{
+    animation: scrollOff 0.3s linear;
+}
+@keyframes scrollOff{
+    0%{
+        display: block
+    }
+    100%{
+        display: none
+    }
+}
+
+.navResponsiveOn{
+    @include nav();
+    width: 100%;
+    max-width: 300px;
+    right: 0;
+    top: 50px;
+    height: 300px;
+    animation: none;
+    
+    z-index: 100;
+    @include flex($direction: column, $justify: space-around);
+    a{
+        background-color: transparent;
+    }
+}
+
+.navResponsiveOff{
+    display: none;
+}
+
+
+@media screen and (max-width: 700px){
+    .nav-container{
+        a{
+            display: none;
+        }
+        button{
+            position: absolute;
+            right: 17%;
+        }
+        .hamburger{
+            display: block;
+        }
+        .navResponsiveOnn{
+            display: block;
+        }
+    }
+}
 
