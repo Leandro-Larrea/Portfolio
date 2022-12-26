@@ -111,11 +111,15 @@ body::-webkit-scrollbar-thumb {
     } 
     .hamburger{
         display: none;
+        align-self: center;
+        margin: 0 5px;
         div{
-            margin: 5px;
+          
             @include flex($direction: column, $justify: space-between);
             width: 30px;
             height: 100%;
+            height: 25px;
+            position: relative;
             cursor: pointer;
             &:hover{
                 .line{
@@ -124,7 +128,8 @@ body::-webkit-scrollbar-thumb {
             }
             .line{
                 background-color: transparent;
-                border-top: 3px solid;
+                height: 3px;
+                background-color: $colorRed;
                 width: 100%;
             }
         }

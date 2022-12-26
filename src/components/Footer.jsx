@@ -38,7 +38,7 @@ export const Footer = () =>{
                     <AnimationOnScroll duration={.5} offset={10} delay={300} animateIn="animate__zoomIn">
                         <a className={`button2 ${theme}`} href="https://api.whatsapp.com/send?phone=542314440302" target="_blank" rel="noopener noreferrer" >
                             <img src={whatsapp}/>
-                            +54-2313-440302
+                            WhatsApp
                         </a>
                     </AnimationOnScroll>
                     <AnimationOnScroll duration={.5} offset={10} delay={600} animateIn="animate__zoomIn">

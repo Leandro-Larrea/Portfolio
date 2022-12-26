@@ -2,7 +2,6 @@
     min-height: 100vh;
     position: relative;
     z-index: 1;
-    overflow-x: hidden;
     padding-top: 5%;
     overflow:hidden;
     
@@ -119,38 +118,60 @@
 }
 
 @media screen and (max-width: 700px) {
-
+.about{
+    top: -15%;
+    overflow: visible;
+}
     .about-position{
         gap: 40%;
-    
+        .about-image-container{
+            position: relative;
+            background: transparent;
+            z-index: 1;
+           
+            margin: 0% 0% 0% 5%;
+            .about-image-position{
+                border: 2px solid $colorRed;
+                position: relative;
+                box-sizing: border-box;
+                width: 85%;
+                
+                z-index: 8;
+                img{
+                    box-shadow: 0 0 4px;
+                    z-index: 20;
+                    position: relative;
+                    width: 100%;
+                    left: 15%;
+                    top: 10vh;
+                    background: transparent;
+                }
+            } 
+        }
     .about-background, .about-background2{
-        max-height: 100vh;
+        max-height: none;
         img{display: none;}
+        max-height: 130vh;
+        overflow: visible;
+        
         
     }
       .about-background{
         .about-text-position{
-        border: 2px solid $colorRed;
-        position: absolute;
-        box-sizing: border-box;
-        top:50%;
-            z-index: 1;
-            left: 0;
-            width: 100%;
+        margin: 5% 0% 5% 5%;
+        top: 00px;
+            left: 10%;
+            width: 80%;     
            .text{
-                font-family: 'Playfair Display', serif;
-                font-size: var(--fontP);
-                box-shadow: 0 0 4px;
                 position: relative;
                 z-index: 15;
                 width: 100%;
-                right: 5%;
-                padding: 10%;
+                right: 15%;
+                padding: 5%;
                 top: -10vh; 
            }
        }
-        position: relative;
-        z-index: 1;
         }
     }
+    
 }

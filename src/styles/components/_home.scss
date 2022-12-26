@@ -5,9 +5,17 @@
     scroll-behavior: smooth;
 }
 
+.main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2%;
+
+}
+
 .header{
     position: relative;
     z-index: 3;
+    width: 100%;
      background: white url(../media/images/programing.jpg) center/cover no-repeat fixed;
     // background-image: url("../media/images/programing.jpg");
     
@@ -69,5 +77,11 @@ min-height: 150px;
     margin: 5%;
 }
 
-
+@media screen and (max-width:700px){
+    .main{
+        width: 100%;
+        grid-row-gap: 7%;
+        height: 560vh;
+    }
+}
 

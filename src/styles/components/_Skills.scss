@@ -44,7 +44,6 @@
         top: 5%;
         position: relative;
         border: 2px solid $colorRed;
-        padding: 5%;
         z-index: 1;
     div{
         position: relative;
@@ -117,6 +116,75 @@
             margin: 0;
             padding: 0;
             width: 100%;  
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tecnologias-container{
+       overflow: visible;
+    }
+    
+    .skills-img-container{
+        order: 3;
+        grid-row: span 2;
+        position: relative;
+        &:before{
+            @include backgroundBefore($height: 60%, $top: -190px);
+       }
+    }
+    
+    .img{
+        position: relative;
+        justify-self: left;
+        top: -30%;
+        right: 0px;
+        left: 0px;
+        max-width: 350px; 
+    }
+    .skills-card{
+    .skills-position{
+        top: 5%;
+        position: relative;
+        border: 0px solid transparent;
+        border-color: transparent;
+        z-index: 1;
+        div{
+            position: relative;
+            bottom: 30%;
+            right: 0%;
+            left: 0;
+            padding: 10%;
+            box-shadow: 0 0 5px;
+            }
+        }   
+    }
+    .skills-main{
+        order: 2;
+        column-gap: 20px; 
+        max-width: 435px;
+        @include flex($direction: column);
+        .skills-container{  
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+            position: relative;
+            top: -0%;
+            align-items: center;
+            justify-items: center;
+            padding: 5%;
+            .ico-div{
+                margin: 0%;
+            }
+            grid-template-columns: 1fr;
+            // background-color: $colorWhite;
+            min-width: 15vw;
+            height: 200px;
+            .ico{
+                margin: 0;
+                padding: 0;
+                width: 100%;  
+            }
         }
     }
 }
