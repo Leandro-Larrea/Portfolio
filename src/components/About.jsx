@@ -12,10 +12,11 @@ export const About = ()=>{
 
     return(
         <div className={`about ${theme}`} id="about">
+            <div className="about-title">
+                    <h1>Sobre</h1> <h1>mi</h1>
+             </div>
             <div className={`about-position`}>
-                <div className="about-title">
-             
-                </div>
+                
                 <div className={`about-image-container ${theme}`}>
                     <div className={"about-image-position"}>
                     <AnimationOnScroll delay={100} animateIn="animate__zoomIn">
@@ -43,12 +44,8 @@ export const About = ()=>{
                 <div className="about-background2">
                     <img src={background}/>
                 </div>
-                <AnimationOnScroll delay={100} animateIn="animate__fadeInRightBig">
-                    <div className={`about-text-container ${theme}`}>
-                       
-                    </div>
-                </AnimationOnScroll>
-                </div>
+
+            </div>
                 
         </div>
     )

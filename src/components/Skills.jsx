@@ -33,8 +33,14 @@ export const Skills = ()=>{
     const backIcos = [ico6, ico4, ico3, ico5, ico10,ico11]
     const icos = frontIcos.concat(backIcos)
    return (
-        <div className={`tecnologias-container ${theme}`} > 
-            <div className={`${theme} skills-card` } id="skills"> 
+        <div className={`tecnologias-container ${theme}`} >
+            <div className={`tecnologias-left ${theme}`}>
+                <div className="skills-img-container">
+                    <img src={pc} className="img"></img>
+                </div>
+            </div>
+            <div className={`tecnologias-right ${theme}`} id="skills">
+            <div className={`skills-card ${theme}`}>   
                 <div className="skills-position">      
                     <AnimationOnScroll className={`skills-text ${theme}`} duration={.2} animateIn="customLeftRight">
                         <h1 className="light">Tecnologias</h1>
@@ -45,30 +51,23 @@ export const Skills = ()=>{
                     </AnimationOnScroll>
                 </div>
             </div>
-            
-           
-            <div className="skills-img-container">
-                <img src={pc} className="img"></img>
-            </div>
-            <div className="skills-main">
-                <div className="skills-container">
-                    {frontIcos?.map((e,i) => 
-                    <div className="ico-div" key={i}>
-                        <AnimationOnScroll  duration={Math.random()+.5} offset={10}   animateIn="animate__zoomIn">
-                            <img  className="ico" src={e}/>
-                        </AnimationOnScroll>
-                    </div>)}
-                </div>
-                <div className="skills-container">
-                    {backIcos?.map((e,i) => 
-                    <div className="ico-div" key={i}>
-                        <AnimationOnScroll  duration={Math.random()+.5} offset={10} animateIn="animate__zoomIn">
-                            <img  className="ico" src={e}/>
-                        </AnimationOnScroll>
-                    </div>)}
-                </div>
-                <div className="text-container">
-                    <h1></h1>
+                <div className="skills-main">
+                    <div className="skills-container">
+                        {frontIcos?.map((e,i) => 
+                        <div className="ico-div" key={i}>
+                            <AnimationOnScroll  duration={Math.random()+.5} offset={10}   animateIn="animate__zoomIn">
+                                <img  className="ico" src={e}/>
+                            </AnimationOnScroll>
+                        </div>)}
+                    </div>
+                    <div className="skills-container">
+                        {backIcos?.map((e,i) => 
+                        <div className="ico-div" key={i}>
+                            <AnimationOnScroll  duration={Math.random()+.5} offset={10} animateIn="animate__zoomIn">
+                                <img  className="ico" src={e}/>
+                            </AnimationOnScroll>
+                        </div>)}
+                    </div>        
                 </div>
             </div>
         </div>

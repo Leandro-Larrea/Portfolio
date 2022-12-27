@@ -21,24 +21,23 @@ a{
         @include logo()
     }
 }
-body{
-    position: relative;
-}
 
+h1{
+    font-family: 'Playfair Display', serif;
+}
 .scroll{
         @include nav($position:fixed, $boxShadow: 5px);
             a{  font-size: var(--fontA);
                 text-align: center;
                 text-decoration: none;
                 transition: .1;
+                font-family: 'Cinzel', serif;
                &:hover{
                 color: $colorRed;
                 transform: none;
                }
-            }
-            
+            }   
         }   
-    
 
 @keyframes appears{
     0%{
@@ -109,6 +108,7 @@ body{
     .nav-container{
         a{
             display: none;
+            
         }
         button{
             position: absolute;

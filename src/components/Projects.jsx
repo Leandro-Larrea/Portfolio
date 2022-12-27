@@ -75,7 +75,7 @@ export const Projects = ()=>{
      
             setCurrentPage(e)
         }
-        let projectsPerPage = (Math.floor(windowSize/500))
+        let projectsPerPage = (windowSize < 500? 1 :(windowSize/500))
         let pagesPerWidth = (windowSize < 1000?
                 a.length: a.length % 2 === 0?
                     a.length/Math.ceil(Math.ceil((windowSize/500))):

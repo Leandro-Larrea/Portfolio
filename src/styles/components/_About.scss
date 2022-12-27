@@ -2,9 +2,22 @@
     min-height: 100vh;
     position: relative;
     z-index: 1;
-    padding-top: 5%;
-    overflow:hidden;
-    
+   
+    .about-title{
+        margin: 30px 5%;
+        h1{
+            position: relative;
+        
+            &:nth-child(1){
+                color: $colorOrange;
+            }
+            display: inline-block;
+            text-align: left;
+            align-self: flex-start;
+            font-size: var(--fontH1);
+            color: $colorRed;
+        }
+    }
 }
 
 *{
@@ -23,18 +36,18 @@
         box-sizing: border-box;
         top:50%;
             z-index: 1;
-            left: 20%;
-            width: 60%;
+            left: 5%;
+            width: 80%;
            .text{
                 font-family: 'Playfair Display', serif;
                 font-size: var(--fontP);
-                box-shadow: 0 0 4px;
+                box-shadow: 0 0 2px;
                 position: relative;
                 z-index: 15;
                 width: 100%;
-                right: 45%;
+                right: 10%;
                 padding: 10%;
-                top: -20vh; 
+                top: -5vh; 
            }
        }
         position: relative;
@@ -44,30 +57,19 @@
             top: 0;
         z-index: 1;
         width: 100%;
-        transform: rotate(-90deg);
+        transform: rotate(-90deg) translate(300px);
     }
 
     }
     .about-background2{
-        max-height: 50vh;
-        overflow: hidden;
+
         img{
             width: 100%;
             transform: rotate(90deg);
             
         }
     }
-    .about-title{
-        grid-column: span 2;
-        z-index: 10;
-        position: absolute;
-        h1{
-            text-align: left;
-            align-self: flex-start;
-            font-size: var(--fontH1);
-            color: $colorRed;
-        }
-    }
+   
     
     .about-text-container{
      background-color: transparent;
@@ -80,21 +82,20 @@
         position: relative;
         background: transparent;
         z-index: 1;
-        margin: 0% 10% 10% 10%;
+        margin: 0% 10% 10% 15%;
         .about-image-position{
             border: 2px solid $colorRed;
             position: relative;
             box-sizing: border-box;
-            width: 80%;
-            
+            width: 80%;          
             z-index: 8;
             img{
-                box-shadow: 0 0 4px;
+                box-shadow: 0 0 1px;
                 z-index: 20;
                 position: relative;
                 width: 100%;
-                left: 15%;
-                top: 10vh;
+                left: 10%;
+                top: 5vh;
                 background: transparent;
             }
         } 
@@ -106,14 +107,10 @@
 }
 @keyframes move{
     0%{
-        transform: translate(50%, 50%);
-        
+        transform: translate(50%, 50%);      
     }
     100%{
-        ransform: translate(0, 0);
-        
-        
-       
+        ransform: translate(0, 0);         
     }
 }
 
@@ -121,57 +118,56 @@
 .about{
     top: -15%;
     overflow: visible;
-}
+    }
     .about-position{
-        gap: 40%;
+        gap: 12%;
         .about-image-container{
             position: relative;
             background: transparent;
-            z-index: 1;
-           
+            z-index: 1;  
             margin: 0% 0% 0% 5%;
             .about-image-position{
                 border: 2px solid $colorRed;
                 position: relative;
                 box-sizing: border-box;
                 width: 85%;
-                
+                max-width: 500px;  
                 z-index: 8;
                 img{
                     box-shadow: 0 0 4px;
                     z-index: 20;
                     position: relative;
                     width: 100%;
-                    left: 15%;
-                    top: 10vh;
+                    left: 8%;
+                    top: 5vh;
                     background: transparent;
                 }
             } 
         }
     .about-background, .about-background2{
         max-height: none;
-        img{display: none;}
-        max-height: 130vh;
-        overflow: visible;
-        
-        
+        img{display: none;}     
+        overflow: visible; 
+
     }
-      .about-background{
-        .about-text-position{
-        margin: 5% 0% 5% 5%;
-        top: 00px;
-            left: 10%;
-            width: 80%;     
-           .text{
-                position: relative;
-                z-index: 15;
-                width: 100%;
-                right: 15%;
-                padding: 5%;
-                top: -10vh; 
-           }
-       }
+
+        .about-background{
+            min-height: 600px;
+            .about-text-position{
+                margin: 5% 0% 5% 5%;
+                top: 00px;
+                left: 10%;
+                width: 80%;  
+            
+                .text{
+                    position: relative;
+                    z-index: 15;
+                    width: 100%;
+                    right: 15%;
+                    padding: 5%;
+                    top: -10vh; 
+                }
+            }
         }
-    }
-    
+    }   
 }
