@@ -11,7 +11,7 @@ export const About = ()=>{
     const { theme, setTheme } = useContext(ThemeContext);
 
     return(
-        <div className={`about ${theme}`} id="about">
+        <div className={`about ${theme}`}>
             <div className="about-title">
                     <h1>Sobre</h1> <h1>mi</h1>
              </div>

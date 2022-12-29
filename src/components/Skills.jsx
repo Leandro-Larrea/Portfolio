@@ -39,7 +39,7 @@ export const Skills = ()=>{
                     <img src={pc} className="img"></img>
                 </div>
             </div>
-            <div className={`tecnologias-right ${theme}`} id="skills">
+            <div className={`tecnologias-right ${theme}`} >
             <div className={`skills-card ${theme}`}>   
                 <div className="skills-position">      
                     <AnimationOnScroll className={`skills-text ${theme}`} duration={.2} animateIn="customLeftRight">

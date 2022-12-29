@@ -2,7 +2,6 @@
     min-height: 100vh;
     position: relative;
     z-index: 1;
-   
     .about-title{
         margin: 30px 5%;
         h1{
@@ -62,8 +61,13 @@
 
     }
     .about-background2{
-
+        width: 100%;
+        display: none;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
         img{
+            position: absolute;
             width: 100%;
             transform: rotate(90deg);
             
@@ -113,7 +117,15 @@
         ransform: translate(0, 0);         
     }
 }
-
+@media screen and (min-width: 1500px) {
+.about-position{
+    .about-background{
+        img{
+            top: -100px;
+        }
+    }
+}
+}
 @media screen and (max-width: 700px) {
 .about{
     top: -15%;

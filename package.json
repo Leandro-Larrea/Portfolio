@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@fullpage/react-fullpage": "^0.1.31",
     "@react-icons/all-files": "^4.1.0",
     "animate.css": "^4.1.1",
     "dotenv": "^16.0.3",
@@ -23,6 +24,7 @@
     "react": "^18.2.0",
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.2.0",
+    "react-full-page": "^0.1.12",
     "react-icons": "^4.7.1",
     "react-router-dom": "^5.2.0",
     "react-type-animation": "^2.1.2",

@@ -1,14 +1,15 @@
 import { useScrollPostion } from "../hooks/useScrollPosition"
 import { ThemeContext } from "../context/ThemeContext";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState, useMemo } from "react";
 import {FaToggleOff} from "react-icons/fa"
 import {FaToggleOn} from "react-icons/fa"
 
 
-export const Nav = () =>{
+export const Nav = (props) =>{
     
     const scrollPosition = useScrollPostion()
     const { theme, setTheme } = useContext(ThemeContext);
+    const [aboutR, setAboutR] = useState(false)
 
     const x = (e)=>{
         setTheme(theme ==="dark"? "light": "dark")
@@ -16,6 +17,17 @@ export const Nav = () =>{
 
     const [windowSize, setWindowSize] = useState(getWindowSize());
 
+    const slides = async (e)=>{
+        // console.log(slideFocused)
+        // props.scrollToSlide(e)
+       let currentSlide = await props.getCurrentSlideIndex()
+       console.log(currentSlide)
+    }
+    
+    useEffect( ()=>{
+       slides(1)
+     },[props.change]) 
+ 
     useEffect(() => {
         function handleWindowResize() {
           setWindowSize(getWindowSize());
@@ -39,9 +51,17 @@ export const Nav = () =>{
     
     const [nav, setNav] = useState(false)
 
+    useEffect(()=>{
+        setAboutR(props.refAbout)
+    },[props.refAbout])
+
+    useEffect(()=>{
+        console.log(aboutR)
+    },[aboutR])
+
     return(
+
         <nav className={scrollPosition < 500? "nav animationOff": `scroll ${theme}`} >
-          
             <div className={"nav-container"}>
              <div className="hamburger" onClick={()=> {nav? setNav(false): setNav(true); console.log(nav)}}>
                 <div>
@@ -64,11 +84,11 @@ export const Nav = () =>{
                 onClick={x}>
                 <FaToggleOn color={theme} size={"24px"}/>
             </button>
-                <a href="#contact" className={`${theme}`}>Contacto</a>
-                <a href="#projects" className={`${theme}`}>Proyectos</a>
-                <a href="#skills" className={`${theme}`}>Tecnologias</a>
-                <a href="#about" className={`${theme}`}>Sobre Mi</a>
-                <a href="#home" className={`${theme}`}>Inicio</a>
+                <a href="#contact" className={`${theme}`} onClick={()=> slides(4)}>Contacto</a>
+                <a href="#projects" className={`${theme}`} onClick={()=> slides(3)}>Proyectos</a>
+                <a href="#skills" className={`${theme}`} onClick={()=> slides(2)}>Tecnologias</a>
+                <a href="#about" className={props.refAbout?`focus ${theme}`:theme} onClick={()=> slides(1)}>Sobre Mi</a>
+                <a href="#home" className={`${theme}`} onClick={()=> slides(0)}>Inicio</a>
                 <div className="ico-container">
                     <p className={`logo ${theme}`}>L L</p>
                 </div>
@@ -77,11 +97,12 @@ export const Nav = () =>{
                     <a href="#contact" className={`${theme}`}>Contacto</a>
                     <a href="#projects" className={`${theme}`}>Proyectos</a>
                     <a href="#skills" className={`${theme}`}>Tecnologias</a>
-                    <a href="#about" className={`${theme}`}>Sobre Mi</a>
+                    <a href="#about" className={props.refAbout?`focus ${theme}`:theme}>Sobre Mi</a>
                     <a href="#home" className={`${theme}`}>Inicio</a>
                 
-            </div>
-            
+            </div>   
         </nav>
     )
 }
+
+

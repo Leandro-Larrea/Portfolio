@@ -1,7 +1,5 @@
 .tecnologias-container{
-    margin-top: 100px;
     min-height: 100vh;
-    // background-color: $colorWhite;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -28,14 +26,13 @@
 }
 
 .tecnologias-right{
+    height: 100%;
     @include flex($direction: column);
-
 }
 
 .tecnologias-left{
-    overflow: visible;
+    overflow: hidden;
     max-height: 100vh;
-  
 }
 
 .skills-card{
