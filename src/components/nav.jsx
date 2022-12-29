@@ -9,7 +9,7 @@ export const Nav = (props) =>{
     
     const scrollPosition = useScrollPostion()
     const { theme, setTheme } = useContext(ThemeContext);
-    const [aboutR, setAboutR] = useState(false)
+
 
     const x = (e)=>{
         setTheme(theme ==="dark"? "light": "dark")
@@ -17,16 +17,8 @@ export const Nav = (props) =>{
 
     const [windowSize, setWindowSize] = useState(getWindowSize());
 
-    const slides = async (e)=>{
-        // console.log(slideFocused)
-        // props.scrollToSlide(e)
-       let currentSlide = await props.getCurrentSlideIndex()
-       console.log(currentSlide)
-    }
     
-    useEffect( ()=>{
-       slides(1)
-     },[props.change]) 
+   
  
     useEffect(() => {
         function handleWindowResize() {
@@ -46,21 +38,32 @@ export const Nav = (props) =>{
       }
     
     useEffect(()=>{
-        if(windowSize > 700) setNav(false)
+        console.log("hola")
+        if(windowSize > 700 ) setNav(false)
+        getIndex()
     },[windowSize])
+
+    useEffect(()=>{
+        console.log("hola")
+       
+        getIndex()
+    },[scrollPosition])
     
     const [nav, setNav] = useState(false)
+    console.log(props)
+    const [currentSlide, setCurrentSlide] = useState(0)
 
-    useEffect(()=>{
-        setAboutR(props.refAbout)
-    },[props.refAbout])
-
-    useEffect(()=>{
-        console.log(aboutR)
-    },[aboutR])
+    const getIndex = async ()=>{
+      if(props.getCurrentSlideIndex){
+            let a = await props.getCurrentSlideIndex()
+            console.log("this is the currentSlideIndex", a)
+            setCurrentSlide(a)}
+           
+    }
+    
+    
 
     return(
-
         <nav className={scrollPosition < 500? "nav animationOff": `scroll ${theme}`} >
             <div className={"nav-container"}>
              <div className="hamburger" onClick={()=> {nav? setNav(false): setNav(true); console.log(nav)}}>
@@ -84,21 +87,21 @@ export const Nav = (props) =>{
                 onClick={x}>
                 <FaToggleOn color={theme} size={"24px"}/>
             </button>
-                <a href="#contact" className={`${theme}`} onClick={()=> slides(4)}>Contacto</a>
-                <a href="#projects" className={`${theme}`} onClick={()=> slides(3)}>Proyectos</a>
-                <a href="#skills" className={`${theme}`} onClick={()=> slides(2)}>Tecnologias</a>
-                <a href="#about" className={props.refAbout?`focus ${theme}`:theme} onClick={()=> slides(1)}>Sobre Mi</a>
-                <a href="#home" className={`${theme}`} onClick={()=> slides(0)}>Inicio</a>
+                <a href="#contact" className={currentSlide === 4?`focus`: scrollPosition < 500?"navADefault":theme}>Contacto</a>
+                <a href="#projects" className={currentSlide === 3?`focus`: scrollPosition < 500?"navADefault":theme}>Proyectos</a>
+                <a href="#skills" className={currentSlide === 2?`focus`: scrollPosition < 500?"navADefault":theme}>Tecnologias</a>
+                <a href="#about" className={currentSlide === 1?`focus`: scrollPosition < 500?"navADefault":theme}>Sobre Mi</a>
+                <a href="#home" className={currentSlide === 0?`focus`: scrollPosition < 500?"navADefault":theme}>Inicio</a>
                 <div className="ico-container">
                     <p className={`logo ${theme}`}>L L</p>
                 </div>
             </div>
                 <div className={nav? scrollPosition > 500?`navResponsiveOn ${theme}`: "navResponsiveOn": "navResponsiveOff"}>
-                    <a href="#contact" className={`${theme}`}>Contacto</a>
-                    <a href="#projects" className={`${theme}`}>Proyectos</a>
-                    <a href="#skills" className={`${theme}`}>Tecnologias</a>
-                    <a href="#about" className={props.refAbout?`focus ${theme}`:theme}>Sobre Mi</a>
-                    <a href="#home" className={`${theme}`}>Inicio</a>
+                    <a href="#contact" className={currentSlide === 4?`focus`:theme}>Contacto</a>
+                    <a href="#projects" className={currentSlide === 3?`focus`:theme}>Proyectos</a>
+                    <a href="#skills" className={currentSlide === 2?`focus`:theme}>Tecnologias</a>
+                    <a href="#about" className={currentSlide === 1?`focus`:theme}>Sobre Mi</a>
+                    <a href="#home" className={currentSlide === 0?`focus`:theme}>Inicio</a>
                 
             </div>   
         </nav>

@@ -2,7 +2,7 @@
     width: 100%;
     @include flex($justify: space-between, $direction: column);
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
     gap: 5%;
     padding: 5%;
     .h1-containers{

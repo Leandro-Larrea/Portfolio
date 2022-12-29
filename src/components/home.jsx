@@ -28,26 +28,32 @@ export const Home = (props) =>{
     const refContact = useRef(null)
 
     
-    
+    const [test, setTest] = useState()
     const isInViewportAbout = useIsInViewport(refAbout);
-    console.log('isInViewportAbout: ', isInViewportAbout);
+    useEffect(()=>{
+        setTest(isInViewportAbout)
+        console.log(test)
+    },[isInViewportAbout])
+    
 
     const isInViewportSkills = useIsInViewport(refSkills);
-    console.log('isInViewportSkills: ', isInViewportSkills);
+   
 
     return(
         <div className={`main ${theme}`}>
-            <header className="header" id="home" >
-                <Nav change={change} setChange={setChange} refAbout={isInViewportAbout}/>
-                <div className="container">
-                <div className="card">
-                <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>Que tal!</h2><h3> soy</h3></AnimationOnScroll>
-                <AnimationOnScroll  animateIn="animate__zoomIn"><h1>Leandro Larrea</h1></AnimationOnScroll>
-                 <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
-                </div>
-                </div>
-            </header>
             <FullPage beforeChange={()=> a()} controls={Nav}>
+                <Slide>
+                    <header className="header" id="home" >
+                        <Nav change={change} setChange={setChange} refAbout={test}/>
+                        <div className="container">
+                        <div className="card">
+                        <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>Que tal!</h2><h3> soy</h3></AnimationOnScroll>
+                        <AnimationOnScroll  animateIn="animate__zoomIn"><h1>Leandro Larrea</h1></AnimationOnScroll>
+                         <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
+                        </div>
+                        </div>
+                    </header>
+                </Slide>
                 
                 <Slide>
                     <div ref={refAbout}>    
