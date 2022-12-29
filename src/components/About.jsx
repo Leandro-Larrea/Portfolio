@@ -9,7 +9,7 @@ import { Filuretes } from "./Filuretes";
 export const About = ()=>{
 
     const { theme, setTheme } = useContext(ThemeContext);
-
+    let a = 1
     return(
         <div className={`about ${theme}`}>
             <div className="about-title">
