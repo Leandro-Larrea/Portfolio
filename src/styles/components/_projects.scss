@@ -1,9 +1,8 @@
 .projects{
     box-sizing: border-box;
-    padding-top: 100px;
-  
+    height: 100vh;
     position: relative;
-    @include flex($direction: column, $justify: space-between);
+    @include flex($direction: column, $justify: center);
     gap: 100px;
     .pages{
         display: flex;

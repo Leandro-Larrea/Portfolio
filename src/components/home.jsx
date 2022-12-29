@@ -41,7 +41,7 @@ export const Home = (props) =>{
 
     return(
         <div className={`main ${theme}`}>
-            <FullPage beforeChange={()=> a()} controls={Nav}>
+            <FullPage beforeChange={()=> a()} controls={Nav} duration={100}>
                 <Slide>
                     <header className="header" id="home" >
                         <Nav change={change} setChange={setChange} refAbout={test}/>
