@@ -3,7 +3,6 @@
     height: 100vh;
     position: relative;
     @include flex($direction: column, $justify: center);
-    gap: 100px;
     .pages{
         display: flex;
         position: relative;

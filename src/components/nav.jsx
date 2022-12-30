@@ -10,15 +10,11 @@ export const Nav = (props) =>{
     const scrollPosition = useScrollPostion()
     const { theme, setTheme } = useContext(ThemeContext);
 
-
     const x = (e)=>{
         setTheme(theme ==="dark"? "light": "dark")
     }
 
     const [windowSize, setWindowSize] = useState(getWindowSize());
-
-    
-   
  
     useEffect(() => {
         function handleWindowResize() {
@@ -64,9 +60,9 @@ export const Nav = (props) =>{
     
 
     return(
-        <nav className={scrollPosition < 500? "nav animationOff": `scroll ${theme}`} >
+        <nav className={scrollPosition < 500 && windowSize > 700? "nav animationOff": `scroll ${theme}`} >
             <div className={"nav-container"}>
-             <div className="hamburger" onClick={()=> {nav? setNav(false): setNav(true); console.log(nav)}}>
+             <div className="hamburger" onClick={()=> {nav? setNav(false): setNav(true)}}>
                 <div>
                     <div className={`line ${theme}`}></div>
                     <div className={`line ${theme}`}></div>
@@ -96,7 +92,7 @@ export const Nav = (props) =>{
                     <p className={`logo ${theme}`}>L L</p>
                 </div>
             </div>
-                <div className={nav? scrollPosition > 500?`navResponsiveOn ${theme}`: "navResponsiveOn": "navResponsiveOff"}>
+                <div className={nav?`navResponsiveOn ${theme}`: "navResponsiveOff"}>
                     <a href="#contact" className={currentSlide === 4?`focus`:theme}>Contacto</a>
                     <a href="#projects" className={currentSlide === 3?`focus`:theme}>Proyectos</a>
                     <a href="#skills" className={currentSlide === 2?`focus`:theme}>Tecnologias</a>
