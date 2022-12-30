@@ -6,7 +6,9 @@ a{
         border-bottom: 1px solid transparent;
         background-color: transparent;
         cursor: pointer;
-        
+        &:hover{
+            color: $colorRed;
+        }
     }
     button{
         color: $colorWhite;
@@ -30,7 +32,10 @@ h1{
                 text-decoration: none;
                 transition: .1;
                 font-family: 'Cinzel', serif;
-              
+               &:hover{
+                color: $colorRed;
+                transform: none;
+               }
             }   
         }   
 
@@ -54,7 +59,7 @@ h1{
     }
 }
 .animationOff{
-    animation: scrollOff 0.2s linear;
+    animation: scrollOff 0.3s linear;
 }
 @keyframes scrollOff{
     0%{
@@ -67,9 +72,9 @@ h1{
 }
 
 .animationResponsiveOff{
-    animation: scrollOffR 0.3s linear;
+    animation: scrollOff 0.3s linear;
 }
-@keyframes scrollOffR{
+@keyframes scrollOff{
     0%{
         display: block
     }
@@ -79,7 +84,7 @@ h1{
 }
 
 .focus{
-    color: $colorRed;
+    color: $colorRed
 }
 
 .navResponsiveOn{
@@ -90,28 +95,12 @@ h1{
     top: 50px;
     height: 300px;
     animation: none;
-    z-index: 100;
-    @include flex($direction: column, $justify: space-around);
-    a{
-        background-color: transparent;
- 
-    }
-}
-
-.navResponsiveOn1{
-    @include nav();
-    width: 100%;
-    max-width: 300px;
-    right: 0;
-    top: 50px;
-    height: 300px;
-    animation: none;
+    
     z-index: 100;
     @include flex($direction: column, $justify: space-around);
     a{
         background-color: transparent;
     }
-
 }
 
 .navResponsiveOff{

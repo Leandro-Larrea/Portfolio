@@ -1,12 +1,13 @@
 .tecnologias-container{
-   height: 100vh;
-    display: flex;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
     gap: 50px;
     box-sizing: border-box;
     padding: 2%;
-    
+    overflow-x: hidden;
 }
 
 .skills-img-container{
@@ -20,8 +21,8 @@
 .img{
     position: relative;
     justify-self: left;
-    width: 80%; 
-
+    top: -50%;
+    width: 100%; 
 }
 
 .tecnologias-right{
@@ -48,7 +49,7 @@
         position: relative;
         border: 2px solid $colorRed;
         z-index: 1;
-        .skills-text{
+    .skills-text{
         position: relative;
         bottom: 10vh;
         right: 15%;
@@ -124,17 +125,14 @@
 
 @media screen and (max-width: 700px) {
     .tecnologias-container{
-        height: auto;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
+        margin-top: -150px;
     }
     .tecnologias-left{
         display: none;
      }
-   
+    .tecnologias-container{
+       overflow: visible;
+    }
     
     .skills-img-container{
         order: 3;

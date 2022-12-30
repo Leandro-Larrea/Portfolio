@@ -54,7 +54,7 @@
 
 .mail-container{
     @include flex($justify: space-around);
-    max-width: 1000px;
+    max-width: 600px;
     width: 100%;
     img{
         width: 200px;

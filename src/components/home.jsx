@@ -10,89 +10,97 @@ import { ThemeContext } from "../context/ThemeContext";
 import { useEffect } from "react"
 import { FullPage, Slide } from 'react-full-page';
 
+
 export const Home = (props) =>{
-    
+
     const { theme, setTheme } = useContext(ThemeContext);
 
-    const [windowWidth, setWindowWidth] = useState(getWindowSize());
+    const [change, setChange] = useState(0)
+
+    const a = async ()=>{
+       await setChange(change +1)
+    }
+
+    const refHome = useRef(null)
+    const refAbout = useRef(null)
+    const refSkills = useRef(null)
+    const refProjects = useRef(null)
+    const refContact = useRef(null)
+
     
-    useEffect(() => {
-        function handleWindowResize() {
-          setWindowWidth(getWindowSize());
-        }
-        
-        window.addEventListener('resize', handleWindowResize);
-        
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        };
-    }, []);
+    const [test, setTest] = useState()
+    const isInViewportAbout = useIsInViewport(refAbout);
+    useEffect(()=>{
+        setTest(isInViewportAbout)
+        console.log(test)
+    },[isInViewportAbout])
     
-      function getWindowSize() {
-        const innerWidth = window.innerWidth;
-        return innerWidth
-      }
 
-      useEffect(()=>{
-        console.log(windowWidth)
-      
-    },[windowWidth])
+    const isInViewportSkills = useIsInViewport(refSkills);
+   
 
-
-      if(windowWidth < 700){{console.log("la concha de la lora")}
-        return  <div className={`main ${theme}`}>
-                    <header className="header" id="home" >
-                        <Nav/>
-                        <div className="container">
-                        <div className="card">
-                        <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>Que tal!</h2><h3> soy</h3></AnimationOnScroll>
-                        <AnimationOnScroll  animateIn="animate__zoomIn"><h1>Leandro Larrea</h1></AnimationOnScroll>
-                        <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
-                        </div>
-                        </div>
-                    </header>
-                    <About></About>                 
-                    <Skills></Skills>                 
-                    <Projects></Projects>                
-                <Footer></Footer>         
-            </div>
-            }
-            else{
-                console.log("la re concha de la lora")
     return(
         <div className={`main ${theme}`}>
-            <FullPage controls={Nav} duration={100} scrollMode={windowWidth > 700? "full-page": "normal"}>
+            <FullPage beforeChange={()=> a()} controls={Nav} duration={100}>
                 <Slide>
                     <header className="header" id="home" >
-                        <Nav/>
+                        <Nav change={change} setChange={setChange} refAbout={test}/>
                         <div className="container">
                         <div className="card">
                         <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>Que tal!</h2><h3> soy</h3></AnimationOnScroll>
                         <AnimationOnScroll  animateIn="animate__zoomIn"><h1>Leandro Larrea</h1></AnimationOnScroll>
-                        <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
+                         <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
                         </div>
                         </div>
                     </header>
                 </Slide>
                 
-                <Slide>   
-                    <About></About>    
+                <Slide>
+                    <div ref={refAbout}>    
+                        <About></About>
+                    </div>    
                 </Slide>
                 
-                <Slide>   
-                    <Skills></Skills>     
+                <Slide>
+                    <div ref={refSkills}>    
+                        <Skills></Skills> 
+                    </div>    
                 </Slide>
                 
-                <Slide>   
-                    <Projects></Projects>    
+                <Slide>
+                    <div ref={refProjects}>    
+                        <Projects></Projects>
+                    </div>    
                 </Slide>
                 
-                <Slide>   
-                    <Footer></Footer>    
+                <Slide>
+                    <div ref={refContact}>    
+                        <Footer></Footer>
+                    </div>    
                 </Slide>
             </FullPage>
         </div>
-    )}
+    )
 }
 
-
+function useIsInViewport(ref) {
+    const [isIntersecting, setIsIntersecting] = useState(false);
+  
+    const observer = useMemo(
+      () =>
+        new IntersectionObserver(([entry]) =>
+          setIsIntersecting(entry.isIntersecting),
+        ),
+      [],
+    );
+  
+    useEffect(() => {
+      observer.observe(ref.current);
+  
+      return () => {
+        observer.disconnect();
+      };
+    }, [ref, observer]);
+  
+    return isIntersecting;
+  }

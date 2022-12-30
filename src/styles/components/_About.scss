@@ -16,9 +16,7 @@
             font-size: var(--fontH1);
             color: $colorRed;
         }
-    
     }
-
 }
 
 *{
@@ -130,11 +128,11 @@
 }
 @media screen and (max-width: 700px) {
 .about{
-    margin-top: -240px;
-    height: none;
+    top: -15%;
+    overflow: visible;
     }
     .about-position{
-        gap: 32%;
+        gap: 12%;
         .about-image-container{
             position: relative;
             background: transparent;
@@ -166,22 +164,20 @@
     }
 
         .about-background{
-            
+            min-height: 600px;
             .about-text-position{
                 margin: 5% 0% 5% 5%;
                 top: 00px;
                 left: 10%;
                 width: 80%;  
-           
-                
+            
                 .text{
                     position: relative;
                     z-index: 15;
                     width: 100%;
-                    right: 10%;
+                    right: 15%;
                     padding: 5%;
-                    top: -6vh; 
-                  
+                    top: -10vh; 
                 }
             }
         }
