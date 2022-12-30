@@ -3,12 +3,12 @@
    gap: 10px;
    position: relative;
    width: 95%;
-   max-width: 600px;
+  height: 40vh;
    padding: 20px;
    h1{
     background-color: #1f79e1;
     
-
+    
     position: relative;
     display: inline-block;
     font-size: 2em;
@@ -57,7 +57,7 @@
     textArea{
         background-color: $colorWhite;
         outline: none;
-        height: 140px;
+        height: 80%;
         width: 100%;
         border:1px solid;padding: 10px;
     }
