@@ -2,7 +2,7 @@ import videogames from "../media/images/videogames.png";
 import pokemons from "../media/images/pokemons.png";
 import pokemonsMobile from "../media/images/pokemonsMobile.png";
 import eddie from "../media/images/eddie.png";
-import eddieMobile from "../media/images/eddieMobile.png";
+import eddieMobile from "../media/images/EddieMobile.png";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import github from "../media/images/programing-icos/github.png"
 import { useContext, useEffect, useState } from "react";
