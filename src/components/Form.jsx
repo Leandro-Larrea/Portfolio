@@ -29,7 +29,7 @@ export const ContactUs = () => {
       
       <input placeholder='Nombre*' className={`input ${theme}`} type="text" name="user_name" id='"user_name"' />
       
-      <input placeholder='marcelito' className={`input ${theme}`} type="email" name="user_email" />
+      <input placeholder='Email' className={`input ${theme}`} type="email" name="user_email" />
       
       <textarea className={`${theme}`} name="message" />
       <button className={`submit ${theme}`} type="submit">Enviar</button>

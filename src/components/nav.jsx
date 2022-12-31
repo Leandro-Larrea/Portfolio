@@ -34,25 +34,24 @@ export const Nav = (props) =>{
       }
     
     useEffect(()=>{
-        console.log("hola")
+       
         if(windowSize > 700 ) setNav(false)
         getIndex()
     },[windowSize])
 
     useEffect(()=>{
-        console.log("hola")
+      
        
         getIndex()
     },[scrollPosition])
     
     const [nav, setNav] = useState(false)
-    console.log(props)
+  
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const getIndex = async ()=>{
       if(props.getCurrentSlideIndex){
             let a = await props.getCurrentSlideIndex()
-            console.log("this is the currentSlideIndex", a)
             setCurrentSlide(a)}
            
     }
@@ -83,21 +82,21 @@ export const Nav = (props) =>{
                 onClick={x}>
                 <FaToggleOn color={theme} size={"24px"}/>
             </button>
-                <a href="#contact" className={currentSlide === 4?`focus`: scrollPosition < 500?"navADefault":theme}>Contacto</a>
-                <a href="#projects" className={currentSlide === 3?`focus`: scrollPosition < 500?"navADefault":theme}>Proyectos</a>
-                <a href="#skills" className={currentSlide === 2?`focus`: scrollPosition < 500?"navADefault":theme}>Tecnologias</a>
-                <a href="#about" className={currentSlide === 1?`focus`: scrollPosition < 500?"navADefault":theme}>Sobre Mi</a>
-                <a href="#home" className={currentSlide === 0?`focus`: scrollPosition < 500?"navADefault":theme}>Inicio</a>
+                <a href="#contact" onClick={()=> props.scrollToSlide(4)} className={currentSlide === 4?`focus`: scrollPosition < 500?"navADefault":theme}>Contacto</a>
+                <a href="#projects" onClick={()=> props.scrollToSlide(3)} className={currentSlide === 3?`focus`: scrollPosition < 500?"navADefault":theme}>Proyectos</a>
+                <a href="#skills" onClick={()=> props.scrollToSlide(2)} className={currentSlide === 2?`focus`: scrollPosition < 500?"navADefault":theme}>Tecnologias</a>
+                <a href="#about" onClick={()=> props.scrollToSlide(1)} className={currentSlide === 1?`focus`: scrollPosition < 500?"navADefault":theme}>Sobre Mi</a>
+                <a href="#home" onClick={()=> props.scrollToSlide(0)} className={currentSlide === 0?`focus`: scrollPosition < 500?"navADefault":theme}>Inicio</a>
                 <div className="ico-container">
                     <p className={`logo ${theme}`}>L L</p>
                 </div>
             </div>
                 <div className={nav?`navResponsiveOn ${theme}`: "navResponsiveOff"}>
-                    <a href="#contact" className={currentSlide === 4?`focus`:theme}>Contacto</a>
-                    <a href="#projects" className={currentSlide === 3?`focus`:theme}>Proyectos</a>
-                    <a href="#skills" className={currentSlide === 2?`focus`:theme}>Tecnologias</a>
-                    <a href="#about" className={currentSlide === 1?`focus`:theme}>Sobre Mi</a>
-                    <a href="#home" className={currentSlide === 0?`focus`:theme}>Inicio</a>
+                    <a href="#contact" onClick={()=> props.scrollToSlide(4)} className={currentSlide === 4?`focus`:theme}>Contacto</a>
+                    <a href="#projects" onClick={()=> props.scrollToSlide(3)} className={currentSlide === 3?`focus`:theme}>Proyectos</a>
+                    <a href="#skills" onClick={()=> props.scrollToSlide(2)} className={currentSlide === 2?`focus`:theme}>Tecnologias</a>
+                    <a href="#about" onClick={()=> props.scrollToSlide(1)} className={currentSlide === 1?`focus`:theme}>Sobre Mi</a>
+                    <a href="#home" onClick={()=> props.scrollToSlide(0)} className={currentSlide === 0?`focus`:theme}>Inicio</a>
                 
             </div>   
         </nav>

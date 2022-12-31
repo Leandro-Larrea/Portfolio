@@ -128,9 +128,9 @@
     }
 }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {   
 .about{
-    margin-top: -240px;
+    margin-top: -140px;
     height: none;
     }
     .about-position{
@@ -186,4 +186,10 @@
             }
         }
     }   
+
+    @media screen and (max-height: 500px) { 
+        .about{
+           margin-bottom: 100px;
+        }
+      }
 }

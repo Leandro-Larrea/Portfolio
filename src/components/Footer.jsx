@@ -18,7 +18,7 @@ export const Footer = () =>{
         <div className={`footer ${theme}`} id="contact">
            <AnimationOnScroll  duration={.5} animateIn="animate__fadeInRightBig">
             <div className="h1-containers">
-                <h1>Enviame</h1><h1> un</h1><h1> mensaje</h1>
+                <h1>Contactame</h1>
            </div>
             </AnimationOnScroll> 
     

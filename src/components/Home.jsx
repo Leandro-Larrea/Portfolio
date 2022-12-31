@@ -33,32 +33,26 @@ export const Home = (props) =>{
         return innerWidth
       }
 
-      useEffect(()=>{
-        console.log(windowWidth)
-      
-    },[windowWidth])
-
-
-      if(windowWidth < 700){{console.log("la concha de la lora")}
+      if(windowWidth < 700){
         return  <div className={`main ${theme}`}>
                     <header className="header" id="home" >
                         <Nav/>
                         <div className="container">
-                        <div className="card">
-                        <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>Que tal!</h2><h3> soy</h3></AnimationOnScroll>
-                        <AnimationOnScroll  animateIn="animate__zoomIn"><h1>Leandro Larrea</h1></AnimationOnScroll>
-                        <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
-                        </div>
+                            <div className="card">
+                                <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>Que tal!</h2><h3> soy</h3></AnimationOnScroll>
+                                <AnimationOnScroll  animateIn="animate__zoomIn"><h1>Leandro Larrea</h1></AnimationOnScroll>
+                                <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
+                            </div>
                         </div>
                     </header>
                     <About></About>                 
                     <Skills></Skills>                 
                     <Projects></Projects>                
-                <Footer></Footer>         
-            </div>
-            }
+                 <Footer></Footer>         
+                </div>
+                }
             else{
-                console.log("la re concha de la lora")
+               
     return(
         <div className={`main ${theme}`}>
             <FullPage controls={Nav} duration={100} scrollMode={windowWidth > 700? "full-page": "normal"}>

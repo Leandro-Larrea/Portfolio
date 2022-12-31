@@ -69,17 +69,25 @@ export const Projects = ()=>{
   }
 
         const [currentPage, setCurrentPage] = useState(1)
+        const [projectsPerPage, setProjectsPerPage] = useState(windowSize < 630? 1 :Math.floor(windowSize/630))
 
         const changePage = (e)=>{
             e.preventDefault
      
             setCurrentPage(e)
         }
-        let projectsPerPage = (windowSize < 500? 1 :(windowSize/500))
-        let pagesPerWidth = (windowSize < 1000?
+
+        useEffect(()=>{
+            if(projectsPerPage !== Math.floor(windowSize/630)){
+                console.log("rly",projectsPerPage)
+                setProjectsPerPage(windowSize < 630? 1 :Math.floor((windowSize/630)))
+            }
+        },[windowSize])
+
+        let pagesPerWidth = (windowSize < 1260?
                 a.length: a.length % 2 === 0?
-                    a.length/Math.ceil(Math.ceil((windowSize/500))):
-                    Math.ceil(a.length+2)/Math.ceil(Math.ceil((windowSize/500)))
+                    a.length/Math.ceil(Math.ceil((windowSize/630))):
+                    Math.ceil(a.length+2)/Math.ceil(Math.ceil((windowSize/630)))
             )
     
     useEffect(()=>{
@@ -90,6 +98,7 @@ export const Projects = ()=>{
     const lastproject = currentPage * projectsPerPage;
     const firstproject = lastproject - projectsPerPage
     const renderprojects = a.slice(firstproject, lastproject)
+
     const fcUpdate = (x)=>{
       setCurrentPage(x)
     }

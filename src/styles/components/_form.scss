@@ -1,14 +1,16 @@
 .form{
-    @include flex($direction: column, $align: flex-start);
-   gap: 10px;
-   position: relative;
-   width: 95%;
-  height: 40vh;
-   padding: 20px;
-   h1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-row-gap: 10px;
+    align-content: center;
+    grid-column-gap: 30px;
+    position: relative;
+    width: 95%;
+    height: 40vh;
+    padding: 20px;
+    h1{
     background-color: #1f79e1;
-    
-    
     position: relative;
     display: inline-block;
     font-size: 2em;
@@ -44,9 +46,10 @@
             color: black;
             border: none;
             border-bottom: 1px solid;
-            height: 28px;
+            height: 36px;
             background-color: $colorWhite;
-            
+            font-size: var(--fontA);
+            color: black;
            
     }
     .label{
@@ -60,6 +63,10 @@
         height: 80%;
         width: 100%;
         border:1px solid;padding: 10px;
+        height: 25vh;
+        grid-column: span 2;
+        font-size: var(--fontA);
+        color: black;
     }
 
     .submit{
