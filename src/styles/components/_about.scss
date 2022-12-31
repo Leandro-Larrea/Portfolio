@@ -47,7 +47,8 @@
                 z-index: 15;
                 width: 100%;
                 right: 10%;
-                padding: 10%;
+                padding: 6%;
+                padding-right: 10%;
                 top: -5vh; 
            }
        }
@@ -187,9 +188,5 @@
         }
     }   
 
-    @media screen and (max-height: 500px) { 
-        .about{
-           margin-bottom: 100px;
-        }
-      }
+   
 }

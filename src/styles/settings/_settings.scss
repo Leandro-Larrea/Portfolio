@@ -173,6 +173,25 @@ button{
     background-color: transparent;
 }
 
+@mixin submit($translateX: 0, $translateY: 0){
+    background: transparent;
+    width: 105px;
+    height: 40px;
+    align-self: center;
+    position: absolute;
+    bottom: 0px;
+    grid-column: span 2;
+    justify-self: center;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    background-color: rgba($color: #1f79e1, $alpha: 1.0);     
+    font-size: var(--fontA);
+    cursor: pointer;
+    transform: translate($translateX, $translateY);
+    
+}
+
 
 
 

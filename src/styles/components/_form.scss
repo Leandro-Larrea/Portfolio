@@ -70,19 +70,20 @@
     }
 
     .submit{
-        background: transparent;
-        width: 105px;
-        height: 40px;
-        align-self: center;
-        bottom: 0px;
-        position: absolute;
-        border: none;
-        color: white;
-        border-radius: 2px;
-        background-color: rgba($color: #1f79e1, $alpha: 1.0);
+        @include submit();
         
-        font-size: var(--fontA);
-        cursor: pointer;
+    }
+    .standard{
+        @include submit($translateX: 0, $translateY: 20px);
+        transition: 1.3s;
+    }
+    .right{
+        @include submit($translateX: 150px, $translateY: -20px);
+        transition: .1s
+    }
+    .left{
+        @include submit($translateX: -150px, $translateY: -20px);
+        transition: .1s
     }
     .form-img{
         width: 150px;
