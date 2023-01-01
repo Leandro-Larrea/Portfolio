@@ -12,7 +12,7 @@
     align-items: center;
     grid-template-columns: 1fr;
     max-width: 100%;  
-    gap: 200px;
+    gap: 80px;
 }
 
 .header{
@@ -75,8 +75,8 @@ body{
 }
 
 @media screen and (max-height: 550px) { 
-    .main{
-        gap:250px;
-    }
+    // .main{
+    //     gap:250px;
+    // }
   }
 
