@@ -47,6 +47,7 @@ export const Projects = ()=>{
         img:TommyEmmanuel,
         imgR:TommyEmmanuelMobile,
         demo:"https://octagonal-glorious-kitten.glitch.me/"},
+   
         ]
 
         const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -86,8 +87,8 @@ export const Projects = ()=>{
 
         let pagesPerWidth = (windowSize < 1260?
                 a.length: a.length % 2 === 0?
-                    a.length/Math.ceil(Math.ceil((windowSize/630))):
-                    Math.ceil(a.length+2)/Math.ceil(Math.ceil((windowSize/630)))
+                Math.floor(a.length/Math.floor((windowSize/630))):
+                    Math.floor(a.length/Math.floor((windowSize/630))) +1
             )
     
     useEffect(()=>{

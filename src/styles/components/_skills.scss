@@ -123,7 +123,7 @@
 
 @media screen and (max-width: 700px) {
     .tecnologias-container{
-        margin-top: 200px;
+        margin-top: calc(688px - 100vh);
         height: auto;
         position: relative;
         flex-direction: column;

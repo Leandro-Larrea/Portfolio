@@ -33,7 +33,7 @@ export const Home = (props) =>{
         return innerWidth
       }
 
-      if(windowWidth < 700){
+      if(windowWidth <= 700){
         return  <div className={`main ${theme}`}>
                     <header className="header" id="home" >
                         <Nav/>
