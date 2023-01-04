@@ -26,7 +26,10 @@ export const ContactUs = () => {
 
 
     useEffect(()=>{
-       if(formObj.user_name && formObj.user_email && formObj.message) setTroll(false)
+       if(formObj.user_name && formObj.user_email && formObj.message) {
+        setTroll(false)
+        setTrollClass("standard")
+      }
       else{
         setTroll(true)
       }
@@ -60,8 +63,8 @@ export const ContactUs = () => {
       <input placeholder='Email' className={`input ${theme}`} type="email" value={formObj.user_email} onChange={handleInput} name="user_email" />
       
       <textarea className={`${theme}`} name="message" value={formObj.message} onChange={handleInput} />
-      <button  onMouseOver={toyPpl}
-        className={troll? trollClass:`standard ${theme}`} type="submit">Enviar
+      <button  onMouseOver={troll?toyPpl:null}
+        className={`${trollClass} ${theme}`} type="submit">Enviar
       </button>
     </form>
   );
