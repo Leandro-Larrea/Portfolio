@@ -41,7 +41,7 @@ export const Home = (props) =>{
                             <div className="card">
                                 <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>Que tal!</h2><h3> soy</h3></AnimationOnScroll>
                                 <AnimationOnScroll  animateIn="animate__zoomIn"><h1>Leandro Larrea</h1></AnimationOnScroll>
-                                <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
+                                <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Desarrollador</h3> <h2>Full-Stack</h2></AnimationOnScroll>
                             </div>
                         </div>
                     </header>
@@ -61,9 +61,9 @@ export const Home = (props) =>{
                         <Nav/>
                         <div className="container">
                         <div className="card">
-                        <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>Que tal!</h2><h3> soy</h3></AnimationOnScroll>
-                        <AnimationOnScroll  animateIn="animate__zoomIn"><h1>Leandro Larrea</h1></AnimationOnScroll>
-                        <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Bienvenidos</h3> <h2>a mi portfolio</h2></AnimationOnScroll>
+                        <AnimationOnScroll  animateIn="animate__fadeInLeftBig"><h2>{`< `}</h2> <h2>{` Que tal!`}</h2><h3> soy</h3></AnimationOnScroll>
+                        <AnimationOnScroll  animateIn="animate__zoomIn"><h1> Leandro Larrea</h1></AnimationOnScroll>
+                        <AnimationOnScroll  animateIn="animate__fadeInRightBig"><h3>Desarrollador </h3> <h2>Full-Stack </h2> <h2>{`/>`}</h2></AnimationOnScroll>
                         </div>
                         </div>
                     </header>

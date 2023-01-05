@@ -14,23 +14,27 @@
     @media screen and (min-width: 100px){
         --fontP: 0.8rem;
         --fontA: 1rem;
+        --fontH3: 2.2rem;
         --fontH2: 2.5rem;
         --fontH1: 2.8rem;}
     @media screen and (min-width: 700px){
         --fontP: .9rem;
         --fontA: 1.1rem;
+        --fontH3: 2.2rem;
         --fontH2: 2.4rem;
         --fontH1: 3.0rem;
     }
     @media screen and (min-width: 1800px){
         --fontP: 1.2rem;
         --fontA: 1.3rem;
+        --fontH3: 2.2rem;
         --fontH2: 2.6rem;
         --fontH1: 3.5rem;
     }
     @media screen and (min-width: 2400px){
         --fontP: 1.5rem;
         --fontA: 1.7rem;
+        --fontH3: 2.2rem;
         --fontH2: 3.2rem;
         --fontH1: 4.0rem;
     }
@@ -78,7 +82,7 @@
         margin: $margin;
         opacity: 1;
         background-image: radial-gradient(#797a92 2px, transparent 2px);
-        background-size: 40px 40px;
+        background-size: 55px 55px;
         position: absolute;
     }
    @mixin nav($background: false,$boxShadow: 0, $position: absolute ,){
@@ -116,13 +120,13 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-        flex-basis: 100%;
+        flex-basis: 100%; 
         padding: 0px 5px;
         a{
             font-weight: 300;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family:  "roboto";
             &:hover{
-                color:$colorOrange
+                color:$colorRed
             }
         }
     }

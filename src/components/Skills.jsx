@@ -33,7 +33,7 @@ export const Skills = ()=>{
     const backIcos = [ico6, ico4, ico3, ico5, ico10,ico11]
     const icos = frontIcos.concat(backIcos)
    return (
-        <div className={`tecnologias-container ${theme}`} >
+        <div className={`tecnologias-container ${theme}`} id="skills" >
             <div className={`tecnologias-left ${theme}`}>
                 <div className="skills-img-container">
                     <img src={pc} className="img"></img>

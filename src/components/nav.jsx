@@ -82,21 +82,21 @@ export const Nav = (props) =>{
                 onClick={x}>
                 <FaToggleOn color={theme} size={"24px"}/>
             </button>
-                <a href="#contact" onClick={()=> props.scrollToSlide(4)} className={currentSlide === 4?`focus`: scrollPosition < 500?"navADefault":theme}>Contacto</a>
-                <a href="#projects" onClick={()=> props.scrollToSlide(3)} className={currentSlide === 3?`focus`: scrollPosition < 500?"navADefault":theme}>Proyectos</a>
-                <a href="#skills" onClick={()=> props.scrollToSlide(2)} className={currentSlide === 2?`focus`: scrollPosition < 500?"navADefault":theme}>Tecnologias</a>
-                <a href="#about" onClick={()=> props.scrollToSlide(1)} className={currentSlide === 1?`focus`: scrollPosition < 500?"navADefault":theme}>Sobre Mi</a>
-                <a href="#home" onClick={()=> props.scrollToSlide(0)} className={currentSlide === 0?`focus`: scrollPosition < 500?"navADefault":theme}>Inicio</a>
+                <a href="#contact" onClick={()=> props.scrollToSlide && props.scrollToSlide(4)} className={currentSlide === 4?`focus`: scrollPosition < 500?"navADefault":theme}>Contacto</a>
+                <a href="#projects" onClick={()=> props.scrollToSlide && props.scrollToSlide(3)} className={currentSlide === 3?`focus`: scrollPosition < 500?"navADefault":theme}>Proyectos</a>
+                <a href="#skills" onClick={()=> props.scrollToSlide && props.scrollToSlide(2)} className={currentSlide === 2?`focus`: scrollPosition < 500?"navADefault":theme}>Tecnologias</a>
+                <a href="#about" onClick={()=> props.scrollToSlide && props.scrollToSlide(1)} className={currentSlide === 1?`focus`: scrollPosition < 500?"navADefault":theme}>Sobre Mi</a>
+                <a href="#home" onClick={()=> props.scrollToSlide && props.scrollToSlide(0)} className={currentSlide === 0?`focus`: scrollPosition < 500?"navADefault":theme}>Inicio</a>
                 <div className="ico-container">
                     <p className={`logo ${theme}`}>L L</p>
                 </div>
             </div>
                 <div className={nav?`navResponsiveOn ${theme}`: "navResponsiveOff"}>
-                    <a href="#contact" onClick={()=> props.scrollToSlide(4)} className={currentSlide === 4?`focus`:theme}>Contacto</a>
-                    <a href="#projects" onClick={()=> props.scrollToSlide(3)} className={currentSlide === 3?`focus`:theme}>Proyectos</a>
-                    <a href="#skills" onClick={()=> props.scrollToSlide(2)} className={currentSlide === 2?`focus`:theme}>Tecnologias</a>
-                    <a href="#about" onClick={()=> props.scrollToSlide(1)} className={currentSlide === 1?`focus`:theme}>Sobre Mi</a>
-                    <a href="#home" onClick={()=> props.scrollToSlide(0)} className={currentSlide === 0?`focus`:theme}>Inicio</a>
+                    <a href="#home" onClick={()=> props.scrollToSlide && props.scrollToSlide(0)} className={currentSlide === 0?`focus`:theme}>Inicio</a>
+                    <a href="#about" onClick={()=> props.scrollToSlide && props.scrollToSlide(1)} className={currentSlide === 1?`focus`:theme}>Sobre Mi</a>
+                    <a href="#skills" onClick={()=> props.scrollToSlide && props.scrollToSlide(2)} className={currentSlide === 2?`focus`:theme}>Tecnologias</a>
+                    <a href="#projects" onClick={()=> props.scrollToSlide && props.scrollToSlide(3)} className={currentSlide === 3?`focus`:theme}>Proyectos</a>
+                    <a href="#contact" onClick={()=> props.scrollToSlide && props.scrollToSlide(4)} className={currentSlide === 4?`focus`:theme}>Contacto</a>
                 
             </div>   
         </nav>

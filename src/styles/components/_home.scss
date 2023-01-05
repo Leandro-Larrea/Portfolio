@@ -37,7 +37,7 @@ body{
     position: relative;
     @include flex($justify: center);
     overflow: hidden;
-    background-color: rgba(0,0,0, .65);
+    background-color: rgba(0,0,0, .75);
 }
 
 .cardContainer{
@@ -55,12 +55,19 @@ body{
     h3{
         display: inline;
         color: $colorOrange;
+         font-size: var(--fontH3);
     }
     h2{
         display: inline;
         color: $colorRed;
+         font-size: var(--fontH2);
+         &:nth-child(1), &:nth-child(3){
+            color: white;
+           
+         }
     }
     h1{
+        display: inline;
         font-size: var(--fontH1);
         color: $colorWhite;
         margin-bottom: 20px;
