@@ -9,11 +9,13 @@ const { VITE_PUBLIC_KEY, VITE_TEMPLATE_ID, VITE_SERVICE_ID } = import.meta.env
 
 export const ContactUs = () => {
     const { theme, setTheme } = useContext(ThemeContext);
-    const [formObj, setFormObj] = useState({
-    user_name:"",
-    user_email:"",
-    message:"",
-    })
+
+    const initialForm = {
+      user_name:"",
+      user_email:"",
+      message:"",
+      }
+    const [formObj, setFormObj] = useState(initialForm)
 
     const [troll, setTroll] = useState(true)
     // let troll = true
@@ -46,9 +48,10 @@ export const ContactUs = () => {
     emailjs.sendForm(VITE_SERVICE_ID, VITE_TEMPLATE_ID, form.current, VITE_PUBLIC_KEY)
         .then((result) => {
             console.log(result.text);
-            form.current.childNodes.forEach(e=>{
-            e.value = ""
-            })
+            // form.current.childNodes.forEach(e=>{
+            // e.value = ""
+            // })
+            setFormObj(initialForm)
         }, (error) => {
           console.log(error.text);
         });

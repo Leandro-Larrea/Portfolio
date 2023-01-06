@@ -91,8 +91,10 @@ h1{
     height: 300px;
     animation: none;
     z-index: 100;
+
     @include flex($direction: column, $justify: space-around);
     a{
+        font-family: "roboto";
         background-color: transparent;
  
     }

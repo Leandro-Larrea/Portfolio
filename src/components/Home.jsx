@@ -1,13 +1,13 @@
-import { Skills } from "./Skills"
-import { Footer } from "./Footer"
-import { Nav } from "./nav"
-import { Projects } from "./Projects"
-import { About } from "./About"
+import { Skills } from "./Skills";
+import { Footer } from "./Footer";
+import { Nav } from "./nav";
+import { Projects } from "./Projects";
+import { About } from "./About";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import "animate.css/animate.min.css";
 import { useContext, useMemo, useRef, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import { useEffect } from "react"
+import { useEffect } from "react";
 import { FullPage, Slide } from 'react-full-page';
 
 export const Home = (props) =>{

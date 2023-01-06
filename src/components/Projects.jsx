@@ -13,6 +13,8 @@ import videoGamesMobile from "../media/images/videoGamesMobile.png"
 import modernDesignMobile from "../media/images/modernDesignMobile.png"
 import modernDesign from "../media/images/modernDesign.png"
 import TommyEmmanuel from "../media/images/TommyEmmanuel.png"
+import androidApk from "../media/images/androidApk.png"
+import ConsoleGame from "../media/images/ConsoleGame.png"
 import TommyEmmanuelMobile from "../media/images/TommyEmmanuelMobile.png"
 import { useScrollPostion } from "../hooks/useScrollPosition";
 
@@ -22,6 +24,11 @@ export const Projects = ()=>{
     const { theme, setTheme } = useContext(ThemeContext);
 
     let a =[
+        {link:"https://github.com/Leandro-Larrea/PF-Ecommerce",
+        description:"App Android de un E-commerce de Productos Gaming desarrollada grupalmente, incluye auntenticación de terceros integrada, Pasarela de Pagos, Filtros combinados, Ordenamientos, Cloudinary, Local Storage, Async Storage, Reviews/Puntuación, Dashboard de Admin (C.R.U.D), Notificaciones push/Nodemailer, Borrado Logico y Carrito de Compras.",
+        img:androidApk,
+        imgR:ConsoleGame,
+        demo:"https://drive.google.com/file/d/1JNBPt2cmfsSBrIBU3yH9YQ9F5EoxEkIm/view?usp=drivesdk"},
         {link:"https://github.com/Leandro-Larrea/videoGames",
         demo: "https://leangames.vercel.app/",
         description:"Un proyecto individual usando la api de videogames RAWG en el que integre las tecnologias que aprendi en el curso de HENRY, muestra diferentes juegos de la api, los cuales podemos filtrar y ordenar de diferentes formas, ademas permite al usuario postear editar y eliminar su propio videojuego",
@@ -47,6 +54,7 @@ export const Projects = ()=>{
         img:TommyEmmanuel,
         imgR:TommyEmmanuelMobile,
         demo:"https://octagonal-glorious-kitten.glitch.me/"},
+        
    
         ]
 
