@@ -121,13 +121,13 @@
     }
 }
 @media screen and (min-width: 1500px) {
-.about-position{
-    .about-background{
-        img{
-            top: -100px;
+    .about-position{
+        .about-background{
+            img{
+                top: -100px;
+            }
         }
     }
-}
 }
 @media screen and (max-width: 700px) {   
 .about{
@@ -163,30 +163,22 @@
         max-height: none;
         img{display: none;}     
         overflow: visible; 
-
     }
-
-        .about-background{
-            
+        .about-background{         
             .about-text-position{
                 margin: 5% 0% 5% 5%;
                 top: 00px;
                 left: 10%;
-                width: 80%;  
-           
-                
+                width: 80%;             
                 .text{
                     position: relative;
                     z-index: 15;
                     width: 100%;
                     right: 10%;
                     padding: 5%;
-                    top: -6vh; 
-                  
+                    top: -6vh;      
                 }
             }
         }
     }   
-
-   
 }

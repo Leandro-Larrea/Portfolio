@@ -17,6 +17,7 @@ import androidApk from "../media/images/androidApk.png"
 import ConsoleGame from "../media/images/ConsoleGame.png"
 import TommyEmmanuelMobile from "../media/images/TommyEmmanuelMobile.png"
 import { useScrollPostion } from "../hooks/useScrollPosition";
+import { ImageLoader } from "./ImageLoader";
 
 
 
@@ -28,32 +29,38 @@ export const Projects = ()=>{
         description:"App Android de un E-commerce de Productos Gaming desarrollada grupalmente, incluye auntenticación de terceros integrada, Pasarela de Pagos, Filtros combinados, Ordenamientos, Cloudinary, Local Storage, Async Storage, Reviews/Puntuación, Dashboard de Admin (C.R.U.D), Notificaciones push/Nodemailer, Borrado Logico y Carrito de Compras.",
         img:androidApk,
         imgR:ConsoleGame,
-        demo:"https://drive.google.com/file/d/1JNBPt2cmfsSBrIBU3yH9YQ9F5EoxEkIm/view?usp=drivesdk"},
+        demo:"https://drive.google.com/file/d/1JNBPt2cmfsSBrIBU3yH9YQ9F5EoxEkIm/view?usp=drivesdk",
+        tecnologias:"React native,NodeJs, Express, Redux, MongoDb, Mongoose Css, Javascript"},
         {link:"https://github.com/Leandro-Larrea/videoGames",
         demo: "https://leangames.vercel.app/",
         description:"Un proyecto individual usando la api de videogames RAWG en el que integre las tecnologias que aprendi en el curso de HENRY, muestra diferentes juegos de la api, los cuales podemos filtrar y ordenar de diferentes formas, ademas permite al usuario postear editar y eliminar su propio videojuego",
         img:videogames,
-        imgR:videoGamesMobile},
+        imgR:videoGamesMobile,
+        tecnologias:"React, NodeJs, Express, Redux, postgresql, sequelize Css, Javascript"},
         {link:"https://github.com/Leandro-Larrea/Pokemon",
         demo: "https://pokemon-eight-plum.vercel.app/",
         description:"Un proyecto hecho con la PokeApi, permite al usuario buscar entre los diferentes pokemones asi como crear un pokemon personalizado",
         img:pokemons,
-        imgR:pokemonsMobile},
+        imgR:pokemonsMobile,
+        tecnologias:"React, NodeJs, Express, Redux, postgresql, sequelize Css, Javascript"},
         {link:"https://github.com/Leandro-Larrea/Edie-home-page",
         description:"Eddie homepage es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en un figma, tanto en su version desktop como mobile.",
         img:eddie,
         imgR:eddieMobile,
-        demo:"https://airy-luck-feta.glitch.me/#"},
+        demo:"https://airy-luck-feta.glitch.me/#",
+        tecnologias:"Html, Css, Javascript"},
         {link:"https://github.com/Leandro-Larrea/Edie-home-page",
          description:"Modern interior design es un desafio de devchallenges.io el objetivo era crear una pagina identica a la presentada en una figma, tanto en su version desktop como mobile.",
         img:modernDesign,
         imgR:modernDesignMobile,
-        demo:"https://exclusive-cubic-woodpecker.glitch.me/interior-consultant-master/"},
+        demo:"https://exclusive-cubic-woodpecker.glitch.me/interior-consultant-master/",
+        tecnologias:"Html, Css"},
         {link:"https://octagonal-glorious-kitten.glitch.me/",
          description:"La pagina de tributo fue mi primer proyecto, la primera vez que junte lo que aprendi en html y css e hice algo propio.",
         img:TommyEmmanuel,
         imgR:TommyEmmanuelMobile,
-        demo:"https://octagonal-glorious-kitten.glitch.me/"},
+        demo:"https://octagonal-glorious-kitten.glitch.me/",
+        tecnologias:"Html, Css"},
         
    
         ]
@@ -142,7 +149,9 @@ export const Projects = ()=>{
                          <div className={`projects-card ${theme}`} key={a.link} >
                             <div className="projects-img-container" >
                                 <img className="projects-desktop-screen" src={pcScreen}></img>
-                                <img className="projects-img" src={a.img}></img>
+                                <div className="tecnologias">{a.tecnologias}</div>
+                                {/* <img className="projects-img" src={a.img}></img> */}
+                                <ImageLoader src={a.img}></ImageLoader>
                                 <div className="projects-mobile">
                                     <div className="projects-mobile-position">
                                         <img className="projects-mobile-screen" src={phoneScreenCut}></img>
