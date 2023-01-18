@@ -42,7 +42,7 @@ export const Footer = () =>{
                         </a>
                     </AnimationOnScroll>
                     <AnimationOnScroll duration={.5} offset={10} delay={600} animateIn="animate__zoomIn">
-                        <a className={`button2 ${theme}`} href={"https://www.linkedin.com/in/leandro-gustavo-larrea-11bb90249/"}target="_blank">
+                        <a className={`button2 ${theme}`} href={"https://www.linkedin.com/in/leandro-larrea-11bb90249/"}target="_blank">
                             <img src={linkedin}/>
                             
                         </a>
