@@ -83,22 +83,34 @@
         position: relative;
         z-index: 1;
         border-radius: 5px;
-        .tecnologias{
+        .tecnologiasContainer{
             position: absolute;
-            background-color: rgb(22, 22, 22);
-            color:white;
+            z-index: 10;
+            padding: 0 10px;
+            height: 100%;
             width: 100%;
-            top: -100px;
-            opacity: 1;
-            padding: 10px 0px 10px 20px;
-            transition: .3s;
-        }
-        &:hover{
+            overflow: hidden;
             .tecnologias{
+                
+                position: relative;
+                background-color: $colorOrange;
+                color:white;
+                min-width: 100%;
+                top: -100px;
+                opacity: 1;
+                padding: 10px 0px 10px 20px;
                 transition: .3s;
-                top: 10px;
+            }
+            &:hover{
+                .tecnologias{
+                    display: block;
+                    transition: .3s;
+                    top: 10px;
+                }
             }
         }
+       
+       
         .projects-desktop-screen{
             position: absolute;
             z-index: 10;

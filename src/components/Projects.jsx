@@ -149,7 +149,10 @@ export const Projects = ()=>{
                          <div className={`projects-card ${theme}`} key={a.link} >
                             <div className="projects-img-container" >
                                 <img className="projects-desktop-screen" src={pcScreen}></img>
+                                <div className="tecnologiasContainer">
+
                                 <div className="tecnologias">{a.tecnologias}</div>
+                                </div>
                                 {/* <img className="projects-img" src={a.img}></img> */}
                                 <ImageLoader src={a.img}></ImageLoader>
                                 <div className="projects-mobile">
