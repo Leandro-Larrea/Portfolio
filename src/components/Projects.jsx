@@ -166,7 +166,7 @@ export const Projects = ()=>{
                                 <p className={`${theme}`}>{a.description}</p>
                             </div>
                             <div className="buttons-container" key={a.link} >
-                                <a key={a.link} className={`button1 ${theme}`}  href={a.demo?a.demo:a.link } target="_blank">Project</a>
+                                <a key={a.link} className={`button1 ${theme}`}  href={a.demo?a.demo:a.link } target="_blank">Proyecto</a>
                                 <a className={`button2 ${theme}`} href={a.link} target="_blank"><img src={github}/>
                                 <p className={`buttons-code`}>{"<"}</p>
                                 <p className={`buttons-code`}>{"Code"}</p>
