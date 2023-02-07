@@ -7,7 +7,9 @@ import { useEffect } from 'react';
 
 const { VITE_PUBLIC_KEY, VITE_TEMPLATE_ID, VITE_SERVICE_ID } = import.meta.env
 
+
 export const ContactUs = () => {
+  const [loader, setLoader] = useState(false)
     const { theme, setTheme } = useContext(ThemeContext);
 
     const initialForm = {
@@ -29,13 +31,13 @@ export const ContactUs = () => {
 
     useEffect(()=>{
        if(formObj.user_name && formObj.user_email && formObj.message) {
-        setTroll(false)
-        setTrollClass("standard")
+        setTroll(false);
+        setTrollClass("standard");
       }
       else{
-        setTroll(true)
+        setTroll(true);
       }
-    },[formObj])
+    },[formObj]);
 
     const handleInput = (e)=>{
       setFormObj({...formObj,[e.target.name]:e.target.value})
@@ -44,19 +46,17 @@ export const ContactUs = () => {
     const form = useRef();
     const sendEmail = (e) => {
     e.preventDefault();
-
+      setLoader(true);
     emailjs.sendForm(VITE_SERVICE_ID, VITE_TEMPLATE_ID, form.current, VITE_PUBLIC_KEY)
         .then((result) => {
             console.log(result.text);
-            // form.current.childNodes.forEach(e=>{
-            // e.value = ""
-            // })
-            setFormObj(initialForm)
+            setFormObj(initialForm);
+            setLoader(false);
         }, (error) => {
           console.log(error.text);
+          setLoader(false);
         });
-      
-    };
+      };
 
   return (
     <form ref={form} className="form" onSubmit={sendEmail}>
@@ -66,9 +66,12 @@ export const ContactUs = () => {
       <input placeholder='Email' className={`input ${theme}`} type="email" value={formObj.user_email} onChange={handleInput} name="user_email" />
       
       <textarea className={`${theme}`} name="message" value={formObj.message} onChange={handleInput} />
+      {!loader?
       <button  onMouseOver={troll?toyPpl:null}
         className={`${trollClass} ${theme}`} type="submit">Enviar
-      </button>
+      </button>:
+      <button className='buttonLoading'></button>
+}
     </form>
   );
 };
