@@ -1,31 +1,89 @@
-.imageContainer{
+.imageContainer {
+  width: 100%;
+  min-width: 350px;
+  height: 100%;
+  background-color: black;
+  min-height: 200px;
+}
+
+.on {
+  opacity: 1;
+  transition: opacity 1s;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.off {
+  width: 100%;
+  opacity: 0;
+  background-color: black;
+}
+
+.loaderContainer {
+  width: 100%;
+
+  background-color: black;
+}
+
+.mobileimageContainer {
+  border-radius: 20px;
+  padding: 15px 2px;
+
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  min-width: 100%;
+  height: 208px;
+  margin: auto;
+  background-color: black;
+}
+
+.mobileloaderContainer {
+  border-radius: 20px;
+  padding: 15px 2px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  min-width: 100%;
+  height: 208px;
+  margin: auto;
+  background-color: black;
+}
+
+.mobileon {
+  opacity: 1;
+  transition: opacity 1s;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.mobileoff {
+  width: 100%;
+  opacity: 0;
+  background-color: black;
+}
+
+.mobileloader {
+  font-size: 12px;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .imageContainer {
     width: 100%;
+    min-width: 280px;
     height: 100%;
     background-color: black;
-}
-
-.on{
-    opacity: 1;
-    transition: opacity 1s;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-}
-
-.off{
-    width: 100%;
-    opacity: 0;
-    background-color: black;
-}
-
-.loaderContainer{
-    width: 100%;
-   
-    background-color: black;
-    color: white;
-}
-
-.loader{
-    text-align: center;
-    color: white;
+  }
+  .mobileimageContainer {
+    height: 160px;
+  }
 }
