@@ -24,6 +24,7 @@
     "react-full-page": "^0.1.12",
     "react-icons": "^4.7.1",
     "react-router-dom": "^5.2.0",
+    "react-tooltip": "^5.11.1",
     "react-type-animation": "^2.1.2",
     "sass": "^1.56.1"
   },

@@ -1,64 +1,62 @@
-.footer{
-    width: 100%;
-    @include flex($justify: space-between, $direction: column);
-    overflow: hidden;
-    min-height: 100vh;
-    gap: 5%;
-    padding: 5%;
-    .h1-containers{
-        &::first-letter{
-            color: $colorOrange;   
-        }
-        h1{font-size: var(--fontH1);
-            &:nth-child(1){
-                color: $colorRed;
-            }
-            &:nth-child(2){
-                color: $colorOrange;
-            }
-            &:nth-child(3){
-                color: $colorRed;
-            }
-            display: inline;}
-            box-sizing: border-box;
-            min-width: 100vw;
-            margin: 0;
-            padding: 0;
-            text-align: right;
-            padding-right: 5%;
-            
-     
+.footer {
+  width: 100%;
+  @include flex($justify: space-around, $direction: column);
+  overflow: hidden;
+  min-height: 100vh;
+  gap: 5%;
+  padding: 5%;
+  .h1-containers {
+    &::first-letter {
+      color: $colorOrange;
     }
-    .contact-container{
-        
-      
-        @include flex($justify: flex-start);
-        gap: 35px;
-        a{
-            text-decoration: none;
-            font-size: var(--fontA);
-            cursor: pointer;
-            @include flex($justify: space-between);
-            
-            &:hover{
-                transform: scale(1.1);
-            }
-            img{
-                margin: 10px;
-                width: 40px;
-                &:hover{
-                    transform: scale(1.1);
-                }
-            }
-        }
+    h1 {
+      font-size: var(--fontH1);
+      &:nth-child(1) {
+        color: $colorRed;
+      }
+      &:nth-child(2) {
+        color: $colorOrange;
+      }
+      &:nth-child(3) {
+        color: $colorRed;
+      }
+      display: inline;
     }
+    box-sizing: border-box;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-right: 5%;
+  }
+  .contact-container {
+    @include flex($justify: flex-start);
+    div {
+      &:hover {
+        transform: scale(1.1);
+      }
+      @include flex($justify: space-between);
+      @include flex($justify: flex-start);
+    }
+    gap: 35px;
+    a {
+      text-decoration: none;
+      font-size: var(--fontA);
+      cursor: pointer;
+
+      img {
+        margin: 10px;
+        width: 40px;
+      }
+    }
+  }
 }
 
-.mail-container{
-    @include flex($justify: space-around);
-    max-width: 1000px;
-    width: 100%;
-    img{
-        width: 200px;
-    }
+.mail-container {
+  @include flex($justify: space-around);
+  max-width: 1000px;
+  width: 100%;
+  img {
+    width: 200px;
+  }
 }

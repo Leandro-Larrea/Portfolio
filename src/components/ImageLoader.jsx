@@ -3,8 +3,6 @@ import { useState } from "react";
 export const ImageLoader = ({ src, alt, type = "" }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  console.log(type);
-
   return (
     <div className={type + "imageContainer"}>
       <img

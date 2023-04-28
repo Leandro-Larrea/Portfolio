@@ -55,12 +55,10 @@ export const ContactUs = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setFormObj(initialForm);
           setLoader(false);
         },
         (error) => {
-          console.log(error.text);
           setLoader(false);
         }
       );
