@@ -114,7 +114,6 @@ export const Projects = () => {
 
   useEffect(() => {
     if (projectsPerPage !== Math.floor(windowSize / 630)) {
-      console.log("rly", projectsPerPage);
       setProjectsPerPage(windowSize < 630 ? 1 : Math.floor(windowSize / 630));
     }
   }, [windowSize]);

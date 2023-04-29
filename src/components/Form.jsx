@@ -12,8 +12,8 @@ export const ContactUs = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const initialForm = {
-    user_name: "",
-    user_email: "",
+    name: "",
+    email: "",
     message: "",
   };
   const [formObj, setFormObj] = useState(initialForm);
@@ -30,7 +30,7 @@ export const ContactUs = () => {
   };
 
   useEffect(() => {
-    if (formObj.user_name && formObj.user_email && formObj.message) {
+    if (formObj.name && formObj.email && formObj.message) {
       setTroll(false);
       setTrollClass("standard");
     } else {
@@ -42,7 +42,7 @@ export const ContactUs = () => {
     setFormObj({ ...formObj, [e.target.name]: e.target.value });
   };
 
-  const form = useRef();
+  const formRef = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
     setLoader(true);
@@ -50,7 +50,7 @@ export const ContactUs = () => {
       .sendForm(
         VITE_SERVICE_ID,
         VITE_TEMPLATE_ID,
-        form.current,
+        formRef.current,
         VITE_PUBLIC_KEY
       )
       .then(
@@ -65,25 +65,23 @@ export const ContactUs = () => {
   };
 
   return (
-    <form ref={form} className="form" onSubmit={sendEmail}>
+    <form ref={formRef} className="form" onSubmit={sendEmail}>
       <input
         placeholder="Nombre*"
         className={`input ${theme}`}
         type="text"
-        value={formObj.user_name}
+        value={formObj.name}
         onChange={handleInput}
-        name="user_name"
-        id="user_name"
+        name="name"
       />
 
       <input
         placeholder="Email"
         className={`input ${theme}`}
         type="email"
-        value={formObj.user_email}
+        value={formObj.email}
         onChange={handleInput}
-        name="user_email"
-        id="user_email"
+        name="email"
       />
 
       <textarea
