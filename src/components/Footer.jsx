@@ -40,7 +40,9 @@ export const Footer = () => {
           >
             <img src={github} />
           </a>
-          <a>GitHub</a>
+          <a href={"https://github.com/Leandro-Larrea"} target="_blank">
+            GitHub
+          </a>
         </AnimationOnScroll>
         <AnimationOnScroll
           duration={0.5}
@@ -57,7 +59,13 @@ export const Footer = () => {
           >
             <img src={whatsapp} />
           </a>
-          <a>What's App</a>
+          <a
+            href="https://api.whatsapp.com/send?phone=542314440302"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            What's App
+          </a>
         </AnimationOnScroll>
         <AnimationOnScroll
           duration={0.5}
@@ -73,7 +81,12 @@ export const Footer = () => {
           >
             <img src={linkedin} />
           </a>
-          <a>Linkedin</a>
+          <a
+            href={"https://www.linkedin.com/in/leandro-larrea-11bb90249/"}
+            target="_blank"
+          >
+            Linkedin
+          </a>
         </AnimationOnScroll>
       </div>
     </div>
