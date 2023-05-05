@@ -12,7 +12,11 @@ export const Footer = () => {
 
   return (
     <div className={`footer ${theme}`} id="contact">
-      <AnimationOnScroll duration={0.5} animateIn="animate__fadeInRightBig">
+      <AnimationOnScroll
+        duration={0.5}
+        animateIn="animate__fadeInRightBig"
+        animateOnce={true}
+      >
         <div className="h1-containers">
           <h1>Contactame</h1>
         </div>
@@ -27,6 +31,7 @@ export const Footer = () => {
           duration={0.5}
           offset={10}
           animateIn="animate__zoomIn"
+          animateOnce={true}
         >
           <a
             className={`button2 ${theme}`}
@@ -42,6 +47,7 @@ export const Footer = () => {
           offset={10}
           delay={300}
           animateIn="animate__zoomIn"
+          animateOnce={true}
         >
           <a
             className={`button2 ${theme}`}
@@ -58,6 +64,7 @@ export const Footer = () => {
           offset={10}
           delay={600}
           animateIn="animate__zoomIn"
+          animateOnce={true}
         >
           <a
             className={`button2 ${theme}`}

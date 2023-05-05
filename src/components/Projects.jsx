@@ -144,7 +144,11 @@ export const Projects = () => {
   return (
     <div className={`projects ${theme}`} id="projects">
       <div className="projects-titles-container">
-        <AnimationOnScroll duration={0.5} animateIn="animate__fadeInLeftBig">
+        <AnimationOnScroll
+          duration={0.5}
+          animateIn="animate__fadeInLeftBig"
+          animateOnce={true}
+        >
           <div className="titles">
             <h1>Mis</h1>
             <h1> proyectos</h1>
@@ -160,6 +164,7 @@ export const Projects = () => {
                 duration={0.5}
                 delay={i * 200}
                 animateIn="animate__zoomIn"
+                animateOnce={true}
               >
                 <button
                   key={i}
@@ -177,6 +182,7 @@ export const Projects = () => {
         {renderprojects?.map((a, i) => {
           return (
             <AnimationOnScroll
+              animateOnce={true}
               key={i}
               duration={0.3}
               animateIn="animate__zoomIn"

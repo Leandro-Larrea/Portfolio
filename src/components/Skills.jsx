@@ -62,6 +62,7 @@ export const Skills = () => {
               className={`skills-text ${theme}`}
               duration={0.2}
               animateIn="customLeftRight"
+              animateOnce={true}
             >
               <h1 className="light">Tecnologias</h1>
               <h2>Frontend</h2>
@@ -77,21 +78,20 @@ export const Skills = () => {
         <div className="skills-main">
           <div className="skills-container">
             {frontIcos?.map((e, i) => (
-              <div className="ico-div" key={i}>
+              <div className="ico-div" key={i} style={{ zIndex: 20 - i }}>
                 <AnimationOnScroll
                   duration={Math.random() + 0.5}
                   offset={10}
                   animateIn="animate__zoomIn"
-                  data-tooltip-id={"i"}
-                  data-tooltip-content="Hello world!"
+                  animateOnce={true}
                 >
                   <img
                     className="ico"
                     src={e.img}
-                    data-tooltip-id={"i"}
+                    data-tooltip-id={i + 1}
                     data-tooltip-content={e.name}
                   />
-                  <Tooltip place="bottom" id={"i"}>
+                  <Tooltip place="bottom" id={i + 1}>
                     asdasd
                   </Tooltip>
                 </AnimationOnScroll>
@@ -100,19 +100,20 @@ export const Skills = () => {
           </div>
           <div className="skills-container">
             {backIcos?.map((e, i) => (
-              <div className="ico-div" key={i}>
+              <div className="ico-div" key={i} style={{ zIndex: 10 - i }}>
                 <AnimationOnScroll
                   duration={Math.random() + 0.5}
                   offset={10}
                   animateIn="animate__zoomIn"
+                  animateOnce={true}
                 >
                   <img
                     className="ico"
                     src={e.img}
-                    data-tooltip-id={"i"}
+                    data-tooltip-id={i + 10}
                     data-tooltip-content={e.name}
                   />
-                  <Tooltip place="bottom" id={"i"}>
+                  <Tooltip place="bottom" id={i + 10}>
                     asdasd
                   </Tooltip>
                 </AnimationOnScroll>

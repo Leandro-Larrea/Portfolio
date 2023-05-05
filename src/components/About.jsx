@@ -16,14 +16,22 @@ export const About = () => {
       <div className={`about-position`}>
         <div className={`about-image-container ${theme}`}>
           <div className={"about-image-position"}>
-            <AnimationOnScroll delay={100} animateIn="animate__zoomIn">
+            <AnimationOnScroll
+              delay={100}
+              animateIn="animate__zoomIn"
+              animateOnce={true}
+            >
               <img src={leandro} className={`about-image ${theme}`}></img>
             </AnimationOnScroll>
           </div>
         </div>
         <div className="about-background">
           <div className={"about-text-position"}>
-            <AnimationOnScroll delay={100} animateIn="animate__zoomIn">
+            <AnimationOnScroll
+              delay={100}
+              animateIn="animate__zoomIn"
+              animateOnce={true}
+            >
               <div className={`text ${theme}`}>
                 Soy Leandro Larrea, tengo 26 años. Cuando descubrí que la
                 programación realmente me apasionaba hice el bootcamp de Henry
