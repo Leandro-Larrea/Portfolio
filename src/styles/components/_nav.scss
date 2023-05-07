@@ -1,144 +1,135 @@
-.nav{    
-@include nav();   
-a{  
-        text-decoration: none;
-        font-size: var(--fontA);
-        border-bottom: 1px solid transparent;
-        background-color: transparent;
-        cursor: pointer;
-        
-    }
-    button{
-        color: $colorWhite;
-    }
-    .logo{
-        @include logo()
-    }
-}
-
-.navADefault{
+.nav {
+  @include nav();
+  a {
+    text-decoration: none;
+    font-size: var(--fontA);
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  button {
     color: $colorWhite;
+  }
+  .logo {
+    @include logo();
+  }
 }
 
-h1{
-    font-family: 'Playfair Display', serif;
-}
-.scroll{
-        @include nav($position:fixed, $boxShadow: 5px);
-            a{  font-size: var(--fontA);
-                text-align: center;
-                text-decoration: none;
-                transition: .1;
-                font-family: 'Cinzel', serif;
-              
-            }   
-        }   
-
-@keyframes appears{
-    0%{
-        display: none;
-        background-color: transparent;
-    }
-    
-    100%{
-        display: block;
-    }
+.navADefault {
+  color: $colorWhite;
 }
 
-@keyframes scroll{
-    0%{
-        top:-50px;
-    }
-    100%{
-        top: 0;
-    }
+h1 {
+  font-family: "Playfair Display", serif;
 }
-.animationOff{
-    animation: scrollOff 0.2s linear;
-}
-@keyframes scrollOff{
-    0%{
-        position: fixed;
-    }
-    100%{
- 
-        top: -100px;
-    }
+.scroll {
+  @include nav($position: fixed, $boxShadow: 5px);
+  a {
+    font-size: var(--fontA);
+    text-align: center;
+    text-decoration: none;
+    transition: 0.1;
+    font-family: "Cinzel", serif;
+  }
 }
 
-.animationResponsiveOff{
-    animation: scrollOffR 0.3s linear;
-}
-@keyframes scrollOffR{
-    0%{
-        display: block
-    }
-    100%{
-        display: none
-    }
-}
-
-.focus{
-    color: $colorRed;
-}
-
-.navResponsiveOn{
-    @include nav();
-    width: 100%;
-    max-width: 300px;
-    right: 0;
-    top: 50px;
-    height: 300px;
-    animation: none;
-    z-index: 100;
-
-    @include flex($direction: column, $justify: space-around);
-    a{
-        font-family: "roboto";
-        background-color: transparent;
- 
-    }
-}
-
-.navResponsiveOn1{
-    @include nav();
-    width: 100%;
-    max-width: 300px;
-    right: 0;
-    top: 50px;
-    height: 300px;
-    animation: none;
-    z-index: 100;
-    @include flex($direction: column, $justify: space-around);
-    a{
-        background-color: transparent;
-    }
-
-}
-
-.navResponsiveOff{
+@keyframes appears {
+  0% {
     display: none;
+    background-color: transparent;
+  }
+
+  100% {
+    display: block;
+  }
 }
 
+@keyframes scroll {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.animationOff {
+  animation: scrollOff 0.2s linear;
+}
+@keyframes scrollOff {
+  0% {
+    position: fixed;
+  }
+  100% {
+    top: -100px;
+  }
+}
 
-@media screen and (max-width: 700px){
-    .nav-container{
-        a{
-            display: none;
-            
-        }
-        button{
-            position: absolute;
-            right: 17%;
-        }
-        .hamburger{
-            display: block;
-        }
-        .navResponsiveOnn{
-            display: block;
-        }
+.animationResponsiveOff {
+  animation: scrollOffR 0.3s linear;
+}
+@keyframes scrollOffR {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.focus {
+  color: $colorRed;
+}
+
+.navResponsiveOn {
+  @include nav();
+  width: 100%;
+  max-width: 300px;
+  right: 0;
+  top: 50px;
+  height: 300px;
+  animation: none;
+  z-index: 100;
+
+  @include flex($direction: column, $justify: space-around);
+  a {
+    font-family: "roboto";
+    background-color: transparent;
+  }
+}
+
+.navResponsiveOn1 {
+  @include nav();
+  width: 100%;
+  max-width: 300px;
+  right: 0;
+  top: 50px;
+  height: 300px;
+  animation: none;
+  z-index: 100;
+  @include flex($direction: column, $justify: space-around);
+  a {
+    background-color: transparent;
+  }
+}
+
+.navResponsiveOff {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .nav-container {
+    a {
+      display: none;
     }
+    button {
+      position: absolute;
+      right: 17%;
+    }
+    .hamburger {
+      display: block;
+    }
+    .navResponsiveOnn {
+      display: block;
+    }
+  }
 }
-
-
-

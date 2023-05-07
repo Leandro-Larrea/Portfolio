@@ -92,11 +92,13 @@
     position: relative;
     column-gap: 50px;
     display: grid;
+    z-index: 1;
     align-items: center;
     justify-items: right;
     .ico-div {
       margin: 0;
       padding: 0;
+      position: relative;
       max-width: 3vw;
       min-width: 40px;
       margin: 7%;
