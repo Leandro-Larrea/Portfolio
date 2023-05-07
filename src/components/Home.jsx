@@ -43,17 +43,17 @@ export const Home = (props) => {
                 animateIn="animate__fadeInLeftBig"
                 animateOnce={true}
               >
-                <h2>Que tal!</h2>
+                <h2>{`< `}</h2> <h2>{` Bienvenidos!`}</h2>
                 <h3> soy</h3>
               </AnimationOnScroll>
               <AnimationOnScroll animateIn="animate__zoomIn" animateOnce={true}>
-                <h1>Leandro Larrea</h1>
+                <h1> Leandro Larrea</h1>
               </AnimationOnScroll>
               <AnimationOnScroll
                 animateIn="animate__fadeInRightBig"
                 animateOnce={true}
               >
-                <h3>Desarrollador</h3> <h2>Full-Stack</h2>
+                <h3>Desarrollador </h3> <h2>Full-Stack </h2> <h2>{`/>`}</h2>
               </AnimationOnScroll>
             </div>
           </div>
@@ -81,7 +81,7 @@ export const Home = (props) => {
                     animateIn="animate__fadeInLeftBig"
                     animateOnce={true}
                   >
-                    <h2>{`< `}</h2> <h2>{` Que tal!`}</h2>
+                    <h2>{`< `}</h2> <h2>{` Bienvenidos!`}</h2>
                     <h3> soy</h3>
                   </AnimationOnScroll>
                   <AnimationOnScroll
