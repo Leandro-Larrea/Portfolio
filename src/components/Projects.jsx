@@ -29,7 +29,7 @@ export const Projects = () => {
         "App Android de un E-commerce de Productos Gaming desarrollada grupalmente, incluye auntenticación de terceros integrada, Pasarela de Pagos, Filtros combinados, Ordenamientos, Cloudinary, Local Storage, Async Storage, Reviews/Puntuación, Dashboard de Admin (C.R.U.D), Notificaciones push/Nodemailer, Borrado Logico y Carrito de Compras.",
       img: androidApk,
       imgR: ConsoleGame,
-      demo: "https://drive.google.com/file/d/1JNBPt2cmfsSBrIBU3yH9YQ9F5EoxEkIm/view?usp=drivesdk",
+      demo: "https://docs.google.com/document/d/1qs0IvDwaDGqwriNuuYnNeAB_u87-_D7pBFFoA2wpXGc/edit",
       tecnologias:
         "React native,NodeJs, Express, Redux, MongoDb, Mongoose Css, Javascript",
     },
