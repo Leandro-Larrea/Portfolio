@@ -6,6 +6,9 @@ import emailjs from "@emailjs/browser";
 import { ContactUs } from "./Form";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export const Footer = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -38,9 +41,15 @@ export const Footer = () => {
             href={"https://github.com/Leandro-Larrea"}
             target="_blank"
           >
-            <img src={github} />
+            <div className="footer-icon">
+              <FaGithub />
+            </div>
           </a>
-          <a href={"https://github.com/Leandro-Larrea"} target="_blank">
+          <a
+            className={`footer-a-text ${theme}`}
+            href={"https://github.com/Leandro-Larrea"}
+            target="_blank"
+          >
             GitHub
           </a>
         </AnimationOnScroll>
@@ -57,9 +66,12 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={whatsapp} />
+            <div className="footer-icon">
+              <FaWhatsapp />
+            </div>
           </a>
           <a
+            className={`footer-a-text ${theme}`}
             href="https://api.whatsapp.com/send?phone=542314440302"
             target="_blank"
             rel="noopener noreferrer"
@@ -79,9 +91,12 @@ export const Footer = () => {
             href={"https://www.linkedin.com/in/leandro-larrea-11bb90249/"}
             target="_blank"
           >
-            <img src={linkedin} />
+            <div className="footer-icon">
+              <FaLinkedin />
+            </div>
           </a>
           <a
+            className={`footer-a-text ${theme}`}
             href={"https://www.linkedin.com/in/leandro-larrea-11bb90249/"}
             target="_blank"
           >

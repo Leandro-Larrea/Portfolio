@@ -11,11 +11,7 @@ export const ImageLoader = ({ src, alt, type = "" }) => {
         className={imageLoaded ? `${type}on` : `${type}off`}
         onLoad={() => setImageLoaded(true)}
       />
-      {!imageLoaded && (
-        <div className={`${type}loaderContainer`}>
-          <span className={`${type}loader`}>Loading...</span>
-        </div>
-      )}
+      {!imageLoaded && <div className={`${type}loaderContainer`}></div>}
     </div>
   );
 };

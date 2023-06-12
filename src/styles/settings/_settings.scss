@@ -44,10 +44,10 @@
 //colors
 $colorGreen: #6d9773;
 $colorDarkGreen: #f2f8f6;
-$colorRed: rgb(221, 58, 121);
-$colorOrange: #ffba00;
-$colorBlack: rgb(15, 12, 21);
-$colorWhite: rgb(243, 243, 243);
+$colorRed: rgb(188, 214, 40);
+$colorOrange: #74afd6;
+$colorBlack: rgb(18, 17, 20);
+$colorWhite: rgb(255, 248, 248);
 $colorWhiteOpacity: rgb(255, 255, 255, 0.6);
 $colorPurple: #5c15e2;
 body::-webkit-scrollbar {
@@ -189,8 +189,9 @@ body::-webkit-scrollbar-thumb {
   justify-self: center;
   border: none;
   color: white;
+  box-shadow: 0px 3px 3px black;
   border-radius: 2px;
-  background-color: rgba($color: #1f79e1, $alpha: 1);
+  background-color: rgba($color: $colorRed, $alpha: 1);
   font-size: var(--fontA);
   cursor: pointer;
   transform: translate($translateX, $translateY);

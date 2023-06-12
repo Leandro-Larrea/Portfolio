@@ -90,6 +90,7 @@ h1 {
   animation: none;
   z-index: 100;
 
+  box-shadow: -3px 05px 5px rgb(49, 49, 49);
   @include flex($direction: column, $justify: space-around);
   a {
     font-family: "roboto";

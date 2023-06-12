@@ -26,6 +26,9 @@ export const About = () => {
           </div>
         </div>
         <div className="about-background">
+          <div className="about-relleno"></div>
+          <div className="about-relleno2"></div>
+          <div className="about-relleno"></div>
           <div className={"about-text-position"}>
             <AnimationOnScroll
               delay={100}
@@ -33,22 +36,17 @@ export const About = () => {
               animateOnce={true}
             >
               <div className={`text ${theme}`}>
-                Soy Leandro Larrea, tengo 26 años. Cuando descubrí que la
-                programación realmente me apasionaba hice el bootcamp de Henry
-                enfocado en desarrollo web full stack, donde aprendí y
-                experimenté con nuevas tecnologías guiado por expertos. Me
-                encanta generar soluciones a través del código y siempre busco
-                aprender algo nuevo en el proceso. Ahora sigo realizando
-                diferentes proyectos para perfeccionar mi código y seguir
-                creciendo como programador.
+                Soy Leandro Larrea, un apasionado de la programación con 26 años
+                de edad. Disfruto enormemente generando soluciones a través del
+                código, enfrentando desafíos y superando obstáculos en cada
+                proyecto en el que me involucro. Mi sed de conocimiento es
+                insaciable y siempre estoy en búsqueda de aprender algo nuevo en
+                este emocionante proceso de desarrollo.
               </div>
             </AnimationOnScroll>
           </div>
-          <img src={background} />
         </div>
-        <div className="about-background2">
-          <img src={background} />
-        </div>
+        <div className="about-background2"></div>
       </div>
     </div>
   );
