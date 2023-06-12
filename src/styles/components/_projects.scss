@@ -27,6 +27,11 @@
         color: white;
       }
     }
+    .buttonOn {
+      background-color: $colorRed;
+      color: white;
+      cursor: default;
+    }
   }
   .projects-titles-container {
     margin: 0;

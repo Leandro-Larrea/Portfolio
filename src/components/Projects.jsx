@@ -161,6 +161,7 @@ export const Projects = () => {
           if (i < pagesPerWidth) {
             return (
               <AnimationOnScroll
+                key={i}
                 duration={0.5}
                 delay={i * 200}
                 animateIn="animate__zoomIn"
@@ -168,7 +169,7 @@ export const Projects = () => {
               >
                 <button
                   key={i}
-                  className={`${theme}`}
+                  className={currentPage === i + 1 ? "buttonOn" : `${theme}`}
                   onClick={() => changePage(i + 1)}
                 >
                   {i + 1}
